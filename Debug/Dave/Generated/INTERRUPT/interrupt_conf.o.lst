@@ -1,0 +1,41 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "interrupt_conf.c"
+  14              	 .text
+  15              	.Ltext0:
+  16              	 .cfi_sections .debug_frame
+  17              	 .global INTERRUPT_0
+  18              	 .section .rodata.INTERRUPT_0,"a",%progbits
+  19              	 .align 2
+  22              	INTERRUPT_0:
+  23 0000 0100     	 .short 1
+  24 0002 15       	 .byte 21
+  25 0003 03       	 .byte 3
+  26 0004 01       	 .byte 1
+  27 0005 00       	 .space 1
+  28 0006 0000     	 .text
+  29              	.Letext0:
+  30              	 .file 1 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  31              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  32              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+  33              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc1_scu.h"
+  34              	 .file 5 "../Dave/Generated/INTERRUPT/interrupt.h"
+  35              	 .file 6 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
+  36              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+  37              	 .file 8 "../Dave/Generated/INTERRUPT/interrupt_conf.c"
+DEFINED SYMBOLS
+                            *ABS*:00000000 interrupt_conf.c
+    {standard input}:22     .rodata.INTERRUPT_0:00000000 INTERRUPT_0
+    {standard input}:19     .rodata.INTERRUPT_0:00000000 $d
+
+NO UNDEFINED SYMBOLS

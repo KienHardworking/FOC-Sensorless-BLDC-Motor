@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ResourceModel:DevicePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/VQFN48.0.0/devicepackage/0">
+  <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/vqfn48.0.0/devicepackage/0/3">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.33"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin3"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="24" URI="http://resources/vqfn48.0.0/devicepackage/0/24">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin24"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="23" URI="http://resources/vqfn48.0.0/devicepackage/0/23">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin23"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="26" URI="http://resources/vqfn48.0.0/devicepackage/0/26">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/CAN_NODE/v4_1_24/CAN_NODE_0.app#//@hwResources.35"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin26"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="25" URI="http://resources/vqfn48.0.0/devicepackage/0/25">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/CAN_NODE/v4_1_24/CAN_NODE_0.app#//@hwResources.36"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin25"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="43" URI="http://resources/vqfn48.0.0/devicepackage/0/43">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin43"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="14" URI="http://resources/vqfn48.0.0/devicepackage/0/14">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.32"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin14"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="11" URI="http://resources/vqfn48.0.0/devicepackage/0/11">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin11"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="13" URI="http://resources/vqfn48.0.0/devicepackage/0/13">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.31"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin13"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="12" URI="http://resources/vqfn48.0.0/devicepackage/0/12">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin12"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="8" URI="http://resources/vqfn48.0.0/devicepackage/0/8">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.28"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin8"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="7" URI="http://resources/vqfn48.0.0/devicepackage/0/7">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin7"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="6" URI="http://resources/vqfn48.0.0/devicepackage/0/6">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin6"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="5" URI="http://resources/vqfn48.0.0/devicepackage/0/5">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.35"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin5"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="36" URI="http://resources/vqfn48.0.0/devicepackage/0/36">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin36"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="30" URI="http://resources/vqfn48.0.0/devicepackage/0/30">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@hwResources.6"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin30"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="39" URI="http://resources/vqfn48.0.0/devicepackage/0/39">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@hwResources.5"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin39"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="29" URI="http://resources/vqfn48.0.0/devicepackage/0/29">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@hwResources.5"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin29"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="10" URI="http://resources/vqfn48.0.0/devicepackage/0/10">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.30"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin10"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="22" URI="http://resources/vqfn48.0.0/devicepackage/0/22">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_14/UART_0.app#//@hwResources.10"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin22"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="4" URI="http://resources/vqfn48.0.0/devicepackage/0/4">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.34"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin4"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="9" URI="http://resources/vqfn48.0.0/devicepackage/0/9">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.29"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin9"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="31" URI="http://resources/vqfn48.0.0/devicepackage/0/31">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@hwResources.5"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin31"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="44" URI="http://resources/vqfn48.0.0/devicepackage/0/44">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin44"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="21" URI="http://resources/vqfn48.0.0/devicepackage/0/21">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_14/UART_0.app#//@hwResources.11"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin21"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="48" URI="http://resources/vqfn48.0.0/devicepackage/0/48">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin48"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="47" URI="http://resources/vqfn48.0.0/devicepackage/0/47">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin47"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="20" URI="http://resources/vqfn48.0.0/devicepackage/0/20">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin20"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="34" URI="http://resources/vqfn48.0.0/devicepackage/0/34">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin34"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="33" URI="http://resources/vqfn48.0.0/devicepackage/0/33">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin33"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="32" URI="http://resources/vqfn48.0.0/devicepackage/0/32">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@hwResources.6"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin32"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="35" URI="http://resources/vqfn48.0.0/devicepackage/0/35">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin35"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="40" URI="http://resources/vqfn48.0.0/devicepackage/0/40">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@hwResources.6"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin40"/>
+  </provided>
+</ResourceModel:DevicePackage>

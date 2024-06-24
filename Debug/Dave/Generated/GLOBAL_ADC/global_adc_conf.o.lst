@@ -1,0 +1,115 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "global_adc_conf.c"
+  14              	 .text
+  15              	.Ltext0:
+  16              	 .cfi_sections .debug_frame
+  17              	 .global group_init_handle0
+  18              	 .section .rodata.group_init_handle0,"a",%progbits
+  19              	 .align 2
+  22              	group_init_handle0:
+  23 0000 00000000 	 .space 20
+  23      00000000 
+  23      00000000 
+  23      00000000 
+  23      00000000 
+  24              	 .global group_init_handle1
+  25              	 .section .rodata.group_init_handle1,"a",%progbits
+  26              	 .align 2
+  29              	group_init_handle1:
+  30 0000 00000000 	 .space 20
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  31              	 .global global_config
+  32              	 .section .rodata.global_config,"a",%progbits
+  33              	 .align 2
+  36              	global_config:
+  37 0000 00       	 .byte 0
+  38 0001 00       	 .byte 0
+  39 0002 00       	 .byte 0
+  40 0003 00       	 .byte 0
+  41 0004 01       	 .byte 1
+  42 0005 00       	 .byte 0
+  43 0006 0000     	 .space 2
+  44 0008 00       	 .byte 0
+  45 0009 00       	 .byte 0
+  46 000a 00       	 .byte 0
+  47 000b 00       	 .byte 0
+  48 000c 00       	 .byte 0
+  49 000d 00       	 .byte 0
+  50 000e 00       	 .byte 0
+  51 000f 00       	 .byte 0
+  52 0010 0000     	 .space 2
+  53 0012 00       	 .byte 0
+  54 0013 00       	 .byte 0
+  55 0014 00       	 .byte 0
+  56 0015 000000   	 .space 3
+  57              	 .global group_0_config
+  58              	 .section .data.group_0_config,"aw",%progbits
+  59              	 .align 2
+  62              	group_0_config:
+  63 0000 00040348 	 .word 1208157184
+  64 0004 00000000 	 .word group_init_handle0
+  65 0008 01       	 .byte 1
+  66 0009 02       	 .byte 2
+  67 000a 0000     	 .space 2
+  68              	 .global group_1_config
+  69              	 .section .data.group_1_config,"aw",%progbits
+  70              	 .align 2
+  73              	group_1_config:
+  74 0000 00080348 	 .word 1208158208
+  75 0004 00000000 	 .word group_init_handle1
+  76 0008 01       	 .byte 1
+  77 0009 02       	 .byte 2
+  78 000a 0000     	 .space 2
+  79              	 .global GLOBAL_ADC_0
+  80              	 .section .data.GLOBAL_ADC_0,"aw",%progbits
+  81              	 .align 2
+  84              	GLOBAL_ADC_0:
+  85 0000 00000000 	 .word group_0_config
+  86 0004 00000000 	 .word group_1_config
+  87 0008 00000000 	 .word global_config
+  88 000c 00000348 	 .word 1208156160
+  89 0010 00400348 	 .word 1208172544
+  90 0014 00000000 	 .space 4
+  91 0018 02       	 .byte 2
+  92 0019 01       	 .byte 1
+  93 001a 0000     	 .space 2
+  94              	 .text
+  95              	.Letext0:
+  96              	 .file 1 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  97              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  98              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+  99              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc_vadc.h"
+ 100              	 .file 5 "../Dave/Generated/GLOBAL_ADC/global_adc.h"
+ 101              	 .file 6 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 102              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 103              	 .file 8 "../Dave/Generated/GLOBAL_ADC/global_adc_conf.c"
+DEFINED SYMBOLS
+                            *ABS*:00000000 global_adc_conf.c
+    {standard input}:22     .rodata.group_init_handle0:00000000 group_init_handle0
+    {standard input}:19     .rodata.group_init_handle0:00000000 $d
+    {standard input}:29     .rodata.group_init_handle1:00000000 group_init_handle1
+    {standard input}:26     .rodata.group_init_handle1:00000000 $d
+    {standard input}:36     .rodata.global_config:00000000 global_config
+    {standard input}:33     .rodata.global_config:00000000 $d
+    {standard input}:62     .data.group_0_config:00000000 group_0_config
+    {standard input}:59     .data.group_0_config:00000000 $d
+    {standard input}:73     .data.group_1_config:00000000 group_1_config
+    {standard input}:70     .data.group_1_config:00000000 $d
+    {standard input}:84     .data.GLOBAL_ADC_0:00000000 GLOBAL_ADC_0
+    {standard input}:81     .data.GLOBAL_ADC_0:00000000 $d
+
+NO UNDEFINED SYMBOLS
