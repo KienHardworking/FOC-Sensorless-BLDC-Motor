@@ -79,16 +79,16 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../GLOBAL_CAN/v4_0_20/GLOBAL_CAN_0.app#/"/>
   </requiredApps>
   <hwResources name="CAN Receive Pin" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_port_pad_can_rx" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/port1/port1_1.dd#//@provided.10"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/port1/port1_1.dd#//@provided.23"/>
   </hwResources>
   <hwResources name="CAN Transmit Pin" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_port_pad_can_tx" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/port1/port1_1.dd#//@provided.14"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/port1/port1_1.dd#//@provided.27"/>
   </hwResources>
   <hwResources name="NODE" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_node" resourceGroupUri="peripheral/can/*/node/*" mResGrpUri="peripheral/can/*/node/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/can/can_0.dd#//@provided.13"/>
   </hwResources>
   <hwResources name="MO_1" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_mobj1" resourceGroupUri="peripheral/can/*/mo/*" mResGrpUri="peripheral/can/*/mo/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/can/can_0.dd#//@provided.8"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/can/can_0.dd#//@provided.9"/>
   </hwResources>
   <hwResources name="MO_2" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_mobj2" resourceGroupUri="" required="false" mResGrpUri="peripheral/can/*/mo/*"/>
   <hwResources name="MO_3" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_mobj3" resourceGroupUri="" required="false" mResGrpUri="peripheral/can/*/mo/*"/>
@@ -122,10 +122,10 @@
   <hwResources name="MO_31" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_mobj31" resourceGroupUri="" required="false" mResGrpUri="peripheral/can/*/mo/*"/>
   <hwResources name="MO_32" URI="http://resources/4.1.24/app/CAN_NODE/0/hwres_can_mobj32" resourceGroupUri="" required="false" mResGrpUri="peripheral/can/*/mo/*"/>
   <hwResources name="CAN Receive Pin" URI="http://resources/4.1.24/app/CAN_NODE/0/__pin_hwres_port_pad_can_rx" resourceGroupUri="devicepackage/0/26" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.3"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.12"/>
   </hwResources>
   <hwResources name="CAN Transmit Pin" URI="http://resources/4.1.24/app/CAN_NODE/0/__pin_hwres_port_pad_can_tx" resourceGroupUri="devicepackage/0/25" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.4"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.13"/>
   </hwResources>
   <connections URI="http://resources/4.1.24/app/CAN_NODE/0/http://resources/4.1.24/app/CAN_NODE/0/vs_can_rxpin/http://resources/4.1.24/app/CAN_NODE/0/vs_can_rxd" systemDefined="true" sourceSignal="receive_pad" targetSignal="receive_pin" srcVirtualSignal="//@virtualSignals.2" targetVirtualSignal="//@virtualSignals.0"/>
   <connections URI="http://resources/4.1.24/app/CAN_NODE/0/http://resources/4.1.24/app/CAN_NODE/0/vs_can_txd/http://resources/4.1.24/app/CAN_NODE/0/vs_can_txpin" systemDefined="true" sourceSignal="transmit_pin" targetSignal="transmit_pad" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.3"/>

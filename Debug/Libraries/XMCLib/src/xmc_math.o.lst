@@ -402,467 +402,467 @@
  211              	.LBB49:
  212              	.LBB50:
  213              	.LBB51:
- 214              	 .file 2 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
-   1:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**************************************************************************//**
-   2:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @file     cmsis_gcc.h
-   3:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
-   4:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @version  V5.3.0
-   5:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @date     26. March 2020
-   6:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  ******************************************************************************/
-   7:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /*
-   8:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Copyright (c) 2009-2020 Arm Limited. All rights reserved.
-   9:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
-  10:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
-  11:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
-  12:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
-  13:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * not use this file except in compliance with the License.
-  14:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * You may obtain a copy of the License at
-  15:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
-  16:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
-  17:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
-  18:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
-  19:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
-  20:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  21:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * See the License for the specific language governing permissions and
-  22:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * limitations under the License.
-  23:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
-  24:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
-  25:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
-  26:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_H
-  27:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
-  28:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ignore some GCC warnings */
-  29:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic push
-  30:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
-  31:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
-  32:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
-  33:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
-  34:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* Fallback for __has_builtin */
-  35:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __has_builtin
-  36:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __has_builtin(x) (0)
-  37:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  38:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
-  39:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* CMSIS compiler specific defines */
-  40:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __ASM
-  41:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __ASM                                  __asm
-  42:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  43:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __INLINE
-  44:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __INLINE                               inline
-  45:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  46:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __STATIC_INLINE
-  47:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
-  48:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  49:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
-  50:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
-  51:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif                                           
-  52:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __NO_RETURN
-  53:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
-  54:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  55:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __USED
-  56:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
-  57:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  58:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __WEAK
-  59:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
-  60:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  61:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED
-  62:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
-  63:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  64:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
-  65:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
-  66:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  67:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED_UNION
-  68:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
-  69:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  70:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
-  71:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
-  72:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-  73:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
-  74:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
-  75:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
-  76:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
-  77:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  78:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
-  79:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
-  80:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-  81:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
-  82:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
-  83:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
-  84:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
-  85:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  86:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
-  87:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
-  88:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-  89:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
-  90:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
-  91:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
-  92:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
-  93:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
-  94:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
-  95:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
-  96:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-  97:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
-  98:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
-  99:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
- 100:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
- 101:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 102:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
- 103:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
- 104:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
- 105:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
- 106:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
- 107:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
- 108:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
- 109:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 110:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __ALIGNED
- 111:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
- 112:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 113:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __RESTRICT
- 114:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __RESTRICT                             __restrict
- 115:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 116:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
- 117:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
- 118:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 119:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 120:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
- 121:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 122:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __PROGRAM_START
- 123:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 124:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 125:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Initializes data and bss sections
- 126:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
- 127:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
- 128:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****            in the used linker script.
- 129:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   
- 130:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 131:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
- 132:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 133:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
- 134:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   
- 135:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   typedef struct {
- 136:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t const* src;
- 137:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t* dest;
- 138:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t  wlen;
- 139:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   } __copy_table_t;
- 140:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   
- 141:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   typedef struct {
- 142:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t* dest;
- 143:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t  wlen;
- 144:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   } __zero_table_t;
- 145:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   
- 146:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
- 147:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
- 148:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
- 149:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
- 150:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 151:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
- 152:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
- 153:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
- 154:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     }
- 155:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   }
- 156:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  
- 157:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
- 158:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
- 159:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****       pTable->dest[i] = 0u;
- 160:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     }
- 161:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   }
- 162:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  
- 163:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   _start();
- 164:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 165:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   
- 166:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
- 167:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 168:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 169:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __INITIAL_SP
- 170:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
- 171:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 172:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 173:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __STACK_LIMIT
- 174:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
- 175:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 176:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 177:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __VECTOR_TABLE
- 178:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
- 179:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 180:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 181:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
- 182:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute__((used, section(".vectors")))
- 183:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 184:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 185:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
- 186:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
- 187:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
- 188:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   @{
- 189:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 190:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 191:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 192:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
- 193:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
- 194:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
- 195:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 196:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
- 197:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 198:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
- 199:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 200:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 201:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 202:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 203:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
- 204:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
- 205:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
- 206:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 207:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
- 208:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
- 210:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 211:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 212:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 213:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 214:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Control Register
- 215:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the Control Register.
- 216:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Control Register value
- 217:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 218:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_CONTROL(void)
- 219:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 220:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 221:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 222:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
- 223:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 224:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 225:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 226:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 227:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 228:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 229:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
- 230:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
- 231:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               non-secure Control Register value
- 232:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 233:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
- 234:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 235:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 236:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 237:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, control_ns" : "=r" (result) );
- 238:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 239:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 240:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 241:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 242:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 243:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 244:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Control Register
- 245:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Writes the given value to the Control Register.
- 246:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    control  Control Register value to set
- 247:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 248:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
- 249:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 250:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
- 251:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 252:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 253:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 254:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 255:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 256:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
- 257:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
- 258:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    control  Control Register value to set
- 259:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 260:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_CONTROL_NS(uint32_t control)
- 261:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 262:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
- 263:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 264:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 265:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 266:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 267:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 268:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get IPSR Register
- 269:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
- 270:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               IPSR Register value
- 271:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 272:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
- 273:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 274:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 275:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 276:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
- 277:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 278:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 279:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 280:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 281:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 282:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get APSR Register
- 283:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the APSR Register.
- 284:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               APSR Register value
- 285:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 286:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
- 287:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 288:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 289:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 290:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
- 291:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 292:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 293:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 294:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 295:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 296:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get xPSR Register
- 297:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
- 298:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               xPSR Register value
- 299:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 300:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_xPSR(void)
- 301:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 302:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 303:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 304:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
- 305:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 306:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 307:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 308:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 309:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 310:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Process Stack Pointer
- 311:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
- 312:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               PSP Register value
- 313:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 314:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
- 315:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 316:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 317:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 318:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
- 319:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 320:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 321:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 322:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 323:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 324:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 325:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Process Stack Pointer (non-secure)
- 326:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
- 327:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               PSP Register value
- 328:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 329:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
- 330:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 331:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 332:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 333:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp_ns"  : "=r" (result) );
- 334:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 335:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 336:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 337:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 338:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 339:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 340:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Process Stack Pointer
- 341:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
- 342:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
- 343:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 344:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
- 345:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 346:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0" : : "r" (topOfProcStack) : );
- 347:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 348:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 349:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 350:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 351:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 352:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
- 353:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
- 354:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
- 355:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 356:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSP_NS(uint32_t topOfProcStack)
- 357:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 358:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR psp_ns, %0" : : "r" (topOfProcStack) : );
- 359:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 360:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 361:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 362:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 363:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 364:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Main Stack Pointer
- 365:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
- 366:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               MSP Register value
- 367:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 368:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
- 369:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 370:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 371:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 372:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
- 373:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 374:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 375:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 376:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 377:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 378:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 379:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
- 380:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
- 381:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               MSP Register value
- 382:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 383:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
- 384:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 385:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 386:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 387:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp_ns" : "=r" (result) );
- 388:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 389:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 390:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 391:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 392:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 393:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 394:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Main Stack Pointer
- 395:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
- 396:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
- 397:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 398:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
- 399:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 400:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
- 401:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 402:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 403:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 404:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 405:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 406:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
- 407:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
- 408:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
- 409:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 410:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
- 411:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 412:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
- 413:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 414:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 415:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 416:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 417:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 418:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 419:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
- 420:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
- 421:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               SP Register value
- 422:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 423:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
- 424:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 425:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 426:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 427:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
- 428:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 429:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 430:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 431:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 432:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 433:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
- 434:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
- 435:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
- 436:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 437:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
- 438:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 439:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR sp_ns, %0" : : "r" (topOfStack) : );
- 440:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 441:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 442:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 443:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 444:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 445:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Priority Mask
- 446:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
- 447:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Priority Mask value
- 448:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 449:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
- 450:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 451:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 452:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 214              	 .file 2 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include/cmsis_gcc.h"
+   1:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**************************************************************************//**
+   2:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @version  V5.3.0
+   5:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @date     26. March 2020
+   6:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  ******************************************************************************/
+   7:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /*
+   8:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Copyright (c) 2009-2020 Arm Limited. All rights reserved.
+   9:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
+  10:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
+  12:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
+  16:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  *
+  18:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  * limitations under the License.
+  23:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  24:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  25:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  28:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  34:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __has_builtin
+  36:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  38:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  39:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __ASM
+  41:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  43:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __INLINE
+  44:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __INLINE                               inline
+  45:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  46:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  49:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif                                           
+  52:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  55:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __USED
+  56:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  58:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __WEAK
+  59:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  61:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED
+  62:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  64:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  67:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  70:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  78:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  86:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  94:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 102:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 110:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 113:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 116:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
+ 117:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
+ 118:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 119:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 120:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
+ 121:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 122:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __PROGRAM_START
+ 123:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 124:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 125:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Initializes data and bss sections
+ 126:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
+ 127:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
+ 128:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****            in the used linker script.
+ 129:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   
+ 130:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 131:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
+ 132:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 133:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
+ 134:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   
+ 135:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   typedef struct {
+ 136:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t const* src;
+ 137:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t* dest;
+ 138:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t  wlen;
+ 139:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   } __copy_table_t;
+ 140:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   
+ 141:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   typedef struct {
+ 142:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t* dest;
+ 143:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     uint32_t  wlen;
+ 144:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   } __zero_table_t;
+ 145:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   
+ 146:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
+ 147:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
+ 148:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
+ 149:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
+ 150:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 151:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
+ 152:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 153:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
+ 154:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     }
+ 155:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   }
+ 156:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  
+ 157:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
+ 158:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 159:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****       pTable->dest[i] = 0u;
+ 160:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     }
+ 161:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   }
+ 162:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  
+ 163:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   _start();
+ 164:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 165:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   
+ 166:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
+ 167:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 168:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 169:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __INITIAL_SP
+ 170:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
+ 171:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 172:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 173:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __STACK_LIMIT
+ 174:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
+ 175:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 176:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 177:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __VECTOR_TABLE
+ 178:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
+ 179:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 180:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 181:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
+ 182:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute__((used, section(".vectors")))
+ 183:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 184:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 185:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 186:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 187:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 188:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   @{
+ 189:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 190:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 191:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 192:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 193:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 194:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 195:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 196:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 197:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 198:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 199:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 200:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 201:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 202:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 203:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 204:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 205:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 206:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 207:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 208:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 210:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 211:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 212:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 213:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 214:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Control Register
+ 215:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the Control Register.
+ 216:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Control Register value
+ 217:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 218:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_CONTROL(void)
+ 219:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 220:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 221:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 222:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 223:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 224:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 225:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 226:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 227:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 228:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 229:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
+ 230:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
+ 231:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               non-secure Control Register value
+ 232:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 233:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
+ 234:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 235:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 236:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 237:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, control_ns" : "=r" (result) );
+ 238:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 239:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 240:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 241:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 242:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 243:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 244:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Control Register
+ 245:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+ 246:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 247:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 248:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
+ 249:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 250:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+ 251:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 252:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 253:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 254:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 255:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 256:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
+ 257:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
+ 258:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 259:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 260:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_CONTROL_NS(uint32_t control)
+ 261:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 262:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
+ 263:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 264:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 265:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 266:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 267:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 268:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get IPSR Register
+ 269:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 270:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               IPSR Register value
+ 271:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 272:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
+ 273:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 274:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 275:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 276:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 277:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 278:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 279:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 280:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 281:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 282:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get APSR Register
+ 283:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ 284:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               APSR Register value
+ 285:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 286:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
+ 287:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 288:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 289:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 290:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 291:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 292:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 293:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 294:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 295:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 296:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get xPSR Register
+ 297:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 298:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               xPSR Register value
+ 299:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 300:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_xPSR(void)
+ 301:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 302:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 303:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 304:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 305:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 306:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 307:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 308:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 309:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 310:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 311:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 312:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               PSP Register value
+ 313:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 314:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
+ 315:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 316:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 317:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 318:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
+ 319:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 320:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 321:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 322:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 323:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 324:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 325:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Process Stack Pointer (non-secure)
+ 326:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
+ 327:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               PSP Register value
+ 328:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 329:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
+ 330:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 331:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 332:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 333:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp_ns"  : "=r" (result) );
+ 334:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 335:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 336:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 337:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 338:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 339:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 340:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ 341:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 342:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 343:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 344:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
+ 345:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 346:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0" : : "r" (topOfProcStack) : );
+ 347:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 348:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 349:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 350:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 351:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 352:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
+ 353:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
+ 354:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 355:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 356:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSP_NS(uint32_t topOfProcStack)
+ 357:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 358:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR psp_ns, %0" : : "r" (topOfProcStack) : );
+ 359:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 360:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 361:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 362:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 363:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 364:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 365:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 366:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               MSP Register value
+ 367:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 368:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
+ 369:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 370:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 371:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 372:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
+ 373:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 374:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 375:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 376:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 377:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 378:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 379:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
+ 380:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
+ 381:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               MSP Register value
+ 382:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 383:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
+ 384:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 385:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 386:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 387:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp_ns" : "=r" (result) );
+ 388:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 389:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 390:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 391:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 392:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 393:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 394:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 395:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 396:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 397:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 398:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
+ 399:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 400:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
+ 401:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 402:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 403:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 404:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 405:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 406:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
+ 407:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
+ 408:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 409:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 410:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
+ 411:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 412:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
+ 413:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 414:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 415:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 416:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 417:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 418:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 419:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
+ 420:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
+ 421:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               SP Register value
+ 422:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 423:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
+ 424:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 425:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 426:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 427:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
+ 428:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 429:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 430:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 431:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 432:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 433:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
+ 434:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
+ 435:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
+ 436:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 437:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
+ 438:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 439:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR sp_ns, %0" : : "r" (topOfStack) : );
+ 440:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 441:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 442:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 443:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 444:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 445:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Priority Mask
+ 446:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 447:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Priority Mask value
+ 448:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 449:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+ 450:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 451:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 452:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
  215              	 .loc 2 453 0
  216              	
  217 000a EFF31083 	 MRS r3,primask
  218              	
  219              	 .code 16
  220 000e 7B61     	 str r3,[r7,#20]
- 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
  221              	 .loc 2 454 0
  222 0010 7B69     	 ldr r3,[r7,#20]
  223              	.LBE51:
@@ -872,7 +872,7 @@
  226 0012 3B61     	 str r3,[r7,#16]
  227              	.LBB52:
  228              	.LBB53:
- 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  229              	 .loc 2 209 0
  230              	
  231 0014 72B6     	 cpsid i
@@ -920,33 +920,33 @@
  263              	.LBB55:
  264              	.LBB56:
  265              	.LBB57:
- 455:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 456:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 457:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 458:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
- 459:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 460:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Priority Mask (non-secure)
- 461:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
- 462:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Priority Mask value
- 463:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 464:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
- 465:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 466:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
- 467:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 468:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) );
- 469:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
- 470:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
- 471:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
- 472:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 473:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
- 474:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
- 475:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Priority Mask
- 476:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
- 477:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
- 478:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
- 479:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
- 480:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
- 481:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 455:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 456:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 457:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 458:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 459:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 460:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Priority Mask (non-secure)
+ 461:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
+ 462:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Priority Mask value
+ 463:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 464:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
+ 465:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 466:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 467:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 468:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) );
+ 469:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 470:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 471:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 472:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 473:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 474:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 475:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Priority Mask
+ 476:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 477:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 478:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 479:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
+ 480:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 481:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
  266              	 .loc 2 481 0
  267 003a BB68     	 ldr r3,[r7,#8]
  268              	
@@ -1006,14 +1006,14 @@
  315              	.LBB59:
  316              	.LBB60:
  317              	.LBB61:
- 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
  318              	 .loc 2 453 0
  319              	
  320 000a EFF31083 	 MRS r3,primask
  321              	
  322              	 .code 16
  323 000e 7B61     	 str r3,[r7,#20]
- 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  324              	 .loc 2 454 0
  325 0010 7B69     	 ldr r3,[r7,#20]
  326              	.LBE61:
@@ -1023,7 +1023,7 @@
  329 0012 3B61     	 str r3,[r7,#16]
  330              	.LBB62:
  331              	.LBB63:
- 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  332              	 .loc 2 209 0
  333              	
  334 0014 72B6     	 cpsid i
@@ -1133,14 +1133,14 @@
  421              	.LBB69:
  422              	.LBB70:
  423              	.LBB71:
- 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
  424              	 .loc 2 453 0
  425              	
  426 000a EFF31082 	 MRS r2,primask
  427              	
  428              	 .code 16
  429 000e 7A61     	 str r2,[r7,#20]
- 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  430              	 .loc 2 454 0
  431 0010 7A69     	 ldr r2,[r7,#20]
  432              	.LBE71:
@@ -1150,7 +1150,7 @@
  435 0012 3A61     	 str r2,[r7,#16]
  436              	.LBB72:
  437              	.LBB73:
- 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  438              	 .loc 2 209 0
  439              	
  440 0014 72B6     	 cpsid i
@@ -1282,14 +1282,14 @@
  547              	.LBB79:
  548              	.LBB80:
  549              	.LBB81:
- 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 453:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
  550              	 .loc 2 453 0
  551              	
  552 000a EFF31082 	 MRS r2,primask
  553              	
  554              	 .code 16
  555 000e 7A61     	 str r2,[r7,#20]
- 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 454:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  556              	 .loc 2 454 0
  557 0010 7A69     	 ldr r2,[r7,#20]
  558              	.LBE81:
@@ -1299,7 +1299,7 @@
  561 0012 3A61     	 str r2,[r7,#16]
  562              	.LBB82:
  563              	.LBB83:
- 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 209:D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include\cmsis_gcc.h **** }
  564              	 .loc 2 209 0
  565              	
  566 0014 72B6     	 cpsid i
@@ -2829,9 +2829,9 @@
  1858              	.Letext0:
  1859              	 .file 3 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
  1860              	 .file 4 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 1861              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
- 1862              	 .file 6 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc_math.h"
- 1863              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 1861              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+ 1862              	 .file 6 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/XMCLib/inc/xmc_math.h"
+ 1863              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_math.c
     {standard input}:18     .text.XMC_MATH_DIV_IsBusy:00000000 $t

@@ -1097,8 +1097,8 @@
  821              	.Letext0:
  822              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
  823              	 .file 3 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 824              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc_eru.h"
- 825              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 824              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/XMCLib/inc/xmc_eru.h"
+ 825              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include/cmsis_gcc.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_eru.c
     {standard input}:18     .text.XMC_ERU_ETL_Init:00000000 $t

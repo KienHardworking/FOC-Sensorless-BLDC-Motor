@@ -29,12 +29,12 @@
   31              	.Letext0:
   32              	 .file 1 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
   33              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
-  34              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
-  35              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc_ccu8.h"
-  36              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc1_scu.h"
+  34              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+  35              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/XMCLib/inc/xmc_ccu8.h"
+  36              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/XMCLib/inc/xmc1_scu.h"
   37              	 .file 6 "../Dave/Generated/GLOBAL_CCU8/global_ccu8.h"
-  38              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
-  39              	 .file 8 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+  38              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include/cmsis_gcc.h"
+  39              	 .file 8 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
   40              	 .file 9 "../Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.c"
 DEFINED SYMBOLS
                             *ABS*:00000000 global_ccu8_conf.c

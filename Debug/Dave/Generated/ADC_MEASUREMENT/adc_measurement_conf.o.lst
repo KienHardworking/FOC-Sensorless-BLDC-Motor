@@ -21,122 +21,122 @@
   23 0000 01       	 .byte 1
   24 0001 00       	 .byte 0
   25 0002 0000     	 .space 2
-  26              	 .global Voltage_PhaseU_ch_config
-  27              	 .section .data.Voltage_PhaseU_ch_config,"aw",%progbits
+  26              	 .global Button_1_ch_config
+  27              	 .section .data.Button_1_ch_config,"aw",%progbits
   28              	 .align 2
-  31              	Voltage_PhaseU_ch_config:
+  31              	Button_1_ch_config:
   32 0000 02       	 .byte 2
   33 0001 00       	 .byte 0
-  34 0002 21       	 .byte 33
+  34 0002 2A       	 .byte 42
   35 0003 00       	 .byte 0
   36 0004 00000000 	 .word 0
   37 0008 00000000 	 .space 4
   38 000c 00       	 .byte 0
   39 000d FF       	 .byte -1
   40 000e 0000     	 .space 2
-  41              	 .global Voltage_PhaseU_res_config
-  42              	 .section .bss.Voltage_PhaseU_res_config,"aw",%nobits
+  41              	 .global Button_1_res_config
+  42              	 .section .bss.Button_1_res_config,"aw",%nobits
   43              	 .align 2
-  46              	Voltage_PhaseU_res_config:
+  46              	Button_1_res_config:
   47 0000 00000000 	 .space 4
-  48              	 .global ADC_MEASUREMENT_Voltage_PhaseU_handle
-  49              	 .section .data.ADC_MEASUREMENT_Voltage_PhaseU_handle,"aw",%progbits
+  48              	 .global ADC_MEASUREMENT_Button_1_handle
+  49              	 .section .data.ADC_MEASUREMENT_Button_1_handle,"aw",%progbits
   50              	 .align 2
-  53              	ADC_MEASUREMENT_Voltage_PhaseU_handle:
-  54 0000 00000000 	 .word Voltage_PhaseU_ch_config
-  55 0004 00000000 	 .word Voltage_PhaseU_res_config
-  56 0008 00040348 	 .word 1208157184
-  57 000c 00       	 .byte 0
-  58 000d 00       	 .byte 0
+  53              	ADC_MEASUREMENT_Button_1_handle:
+  54 0000 00000000 	 .word Button_1_ch_config
+  55 0004 00000000 	 .word Button_1_res_config
+  56 0008 00080348 	 .word 1208158208
+  57 000c 01       	 .byte 1
+  58 000d 07       	 .byte 7
   59 000e 0000     	 .space 2
-  60              	 .global Voltage_PhaseV_ch_config
-  61              	 .section .data.Voltage_PhaseV_ch_config,"aw",%progbits
+  60              	 .global Current_PhaseU_ch_config
+  61              	 .section .data.Current_PhaseU_ch_config,"aw",%progbits
   62              	 .align 2
-  65              	Voltage_PhaseV_ch_config:
+  65              	Current_PhaseU_ch_config:
   66 0000 02       	 .byte 2
   67 0001 00       	 .byte 0
-  68 0002 2C       	 .byte 44
+  68 0002 22       	 .byte 34
   69 0003 00       	 .byte 0
   70 0004 00000000 	 .word 0
   71 0008 00000000 	 .space 4
   72 000c 00       	 .byte 0
-  73 000d 01       	 .byte 1
+  73 000d 05       	 .byte 5
   74 000e 0000     	 .space 2
-  75              	 .global Voltage_PhaseV_res_config
-  76              	 .section .bss.Voltage_PhaseV_res_config,"aw",%nobits
+  75              	 .global Current_PhaseU_res_config
+  76              	 .section .bss.Current_PhaseU_res_config,"aw",%nobits
   77              	 .align 2
-  80              	Voltage_PhaseV_res_config:
+  80              	Current_PhaseU_res_config:
   81 0000 00000000 	 .space 4
-  82              	 .global ADC_MEASUREMENT_Voltage_PhaseV_handle
-  83              	 .section .data.ADC_MEASUREMENT_Voltage_PhaseV_handle,"aw",%progbits
+  82              	 .global ADC_MEASUREMENT_Current_PhaseU_handle
+  83              	 .section .data.ADC_MEASUREMENT_Current_PhaseU_handle,"aw",%progbits
   84              	 .align 2
-  87              	ADC_MEASUREMENT_Voltage_PhaseV_handle:
-  88 0000 00000000 	 .word Voltage_PhaseV_ch_config
-  89 0004 00000000 	 .word Voltage_PhaseV_res_config
-  90 0008 00080348 	 .word 1208158208
-  91 000c 01       	 .byte 1
+  87              	ADC_MEASUREMENT_Current_PhaseU_handle:
+  88 0000 00000000 	 .word Current_PhaseU_ch_config
+  89 0004 00000000 	 .word Current_PhaseU_res_config
+  90 0008 00040348 	 .word 1208157184
+  91 000c 00       	 .byte 0
   92 000d 00       	 .byte 0
   93 000e 0000     	 .space 2
-  94              	 .global Voltage_PhaseW_ch_config
-  95              	 .section .data.Voltage_PhaseW_ch_config,"aw",%progbits
+  94              	 .global Current_PhaseV_ch_config
+  95              	 .section .data.Current_PhaseV_ch_config,"aw",%progbits
   96              	 .align 2
-  99              	Voltage_PhaseW_ch_config:
+  99              	Current_PhaseV_ch_config:
  100 0000 02       	 .byte 2
  101 0001 00       	 .byte 0
- 102 0002 25       	 .byte 37
+ 102 0002 27       	 .byte 39
  103 0003 00       	 .byte 0
  104 0004 00000000 	 .word 0
  105 0008 00000000 	 .space 4
  106 000c 00       	 .byte 0
- 107 000d 00       	 .byte 0
+ 107 000d 06       	 .byte 6
  108 000e 0000     	 .space 2
- 109              	 .global Voltage_PhaseW_res_config
- 110              	 .section .bss.Voltage_PhaseW_res_config,"aw",%nobits
+ 109              	 .global Current_PhaseV_res_config
+ 110              	 .section .bss.Current_PhaseV_res_config,"aw",%nobits
  111              	 .align 2
- 114              	Voltage_PhaseW_res_config:
+ 114              	Current_PhaseV_res_config:
  115 0000 00000000 	 .space 4
- 116              	 .global ADC_MEASUREMENT_Voltage_PhaseW_handle
- 117              	 .section .data.ADC_MEASUREMENT_Voltage_PhaseW_handle,"aw",%progbits
+ 116              	 .global ADC_MEASUREMENT_Current_PhaseV_handle
+ 117              	 .section .data.ADC_MEASUREMENT_Current_PhaseV_handle,"aw",%progbits
  118              	 .align 2
- 121              	ADC_MEASUREMENT_Voltage_PhaseW_handle:
- 122 0000 00000000 	 .word Voltage_PhaseW_ch_config
- 123 0004 00000000 	 .word Voltage_PhaseW_res_config
- 124 0008 00080348 	 .word 1208158208
- 125 000c 01       	 .byte 1
+ 121              	ADC_MEASUREMENT_Current_PhaseV_handle:
+ 122 0000 00000000 	 .word Current_PhaseV_ch_config
+ 123 0004 00000000 	 .word Current_PhaseV_res_config
+ 124 0008 00040348 	 .word 1208157184
+ 125 000c 00       	 .byte 0
  126 000d 01       	 .byte 1
  127 000e 0000     	 .space 2
- 128              	 .global Temp_Feedback_ch_config
- 129              	 .section .data.Temp_Feedback_ch_config,"aw",%progbits
+ 128              	 .global Current_PhaseW_ch_config
+ 129              	 .section .data.Current_PhaseW_ch_config,"aw",%progbits
  130              	 .align 2
- 133              	Temp_Feedback_ch_config:
+ 133              	Current_PhaseW_ch_config:
  134 0000 02       	 .byte 2
  135 0001 00       	 .byte 0
- 136 0002 24       	 .byte 36
+ 136 0002 29       	 .byte 41
  137 0003 00       	 .byte 0
  138 0004 00000000 	 .word 0
  139 0008 00000000 	 .space 4
  140 000c 00       	 .byte 0
  141 000d FF       	 .byte -1
  142 000e 0000     	 .space 2
- 143              	 .global Temp_Feedback_res_config
- 144              	 .section .bss.Temp_Feedback_res_config,"aw",%nobits
+ 143              	 .global Current_PhaseW_res_config
+ 144              	 .section .bss.Current_PhaseW_res_config,"aw",%nobits
  145              	 .align 2
- 148              	Temp_Feedback_res_config:
+ 148              	Current_PhaseW_res_config:
  149 0000 00000000 	 .space 4
- 150              	 .global ADC_MEASUREMENT_Temp_Feedback_handle
- 151              	 .section .data.ADC_MEASUREMENT_Temp_Feedback_handle,"aw",%progbits
+ 150              	 .global ADC_MEASUREMENT_Current_PhaseW_handle
+ 151              	 .section .data.ADC_MEASUREMENT_Current_PhaseW_handle,"aw",%progbits
  152              	 .align 2
- 155              	ADC_MEASUREMENT_Temp_Feedback_handle:
- 156 0000 00000000 	 .word Temp_Feedback_ch_config
- 157 0004 00000000 	 .word Temp_Feedback_res_config
- 158 0008 00080348 	 .word 1208158208
- 159 000c 01       	 .byte 1
- 160 000d 05       	 .byte 5
+ 155              	ADC_MEASUREMENT_Current_PhaseW_handle:
+ 156 0000 00000000 	 .word Current_PhaseW_ch_config
+ 157 0004 00000000 	 .word Current_PhaseW_res_config
+ 158 0008 00040348 	 .word 1208157184
+ 159 000c 00       	 .byte 0
+ 160 000d 07       	 .byte 7
  161 000e 0000     	 .space 2
- 162              	 .global Temp_Ref_ch_config
- 163              	 .section .data.Temp_Ref_ch_config,"aw",%progbits
+ 162              	 .global VDC_ch_config
+ 163              	 .section .data.VDC_ch_config,"aw",%progbits
  164              	 .align 2
- 167              	Temp_Ref_ch_config:
+ 167              	VDC_ch_config:
  168 0000 02       	 .byte 2
  169 0001 00       	 .byte 0
  170 0002 2B       	 .byte 43
@@ -146,248 +146,116 @@
  174 000c 00       	 .byte 0
  175 000d FF       	 .byte -1
  176 000e 0000     	 .space 2
- 177              	 .global Temp_Ref_res_config
- 178              	 .section .bss.Temp_Ref_res_config,"aw",%nobits
+ 177              	 .global VDC_res_config
+ 178              	 .section .bss.VDC_res_config,"aw",%nobits
  179              	 .align 2
- 182              	Temp_Ref_res_config:
+ 182              	VDC_res_config:
  183 0000 00000000 	 .space 4
- 184              	 .global ADC_MEASUREMENT_Temp_Ref_handle
- 185              	 .section .data.ADC_MEASUREMENT_Temp_Ref_handle,"aw",%progbits
+ 184              	 .global ADC_MEASUREMENT_VDC_handle
+ 185              	 .section .data.ADC_MEASUREMENT_VDC_handle,"aw",%progbits
  186              	 .align 2
- 189              	ADC_MEASUREMENT_Temp_Ref_handle:
- 190 0000 00000000 	 .word Temp_Ref_ch_config
- 191 0004 00000000 	 .word Temp_Ref_res_config
+ 189              	ADC_MEASUREMENT_VDC_handle:
+ 190 0000 00000000 	 .word VDC_ch_config
+ 191 0004 00000000 	 .word VDC_res_config
  192 0008 00080348 	 .word 1208158208
  193 000c 01       	 .byte 1
- 194 000d 06       	 .byte 6
+ 194 000d 03       	 .byte 3
  195 000e 0000     	 .space 2
- 196              	 .global VDC_ch_config
- 197              	 .section .data.VDC_ch_config,"aw",%progbits
+ 196              	 .global ADC_MEASUREMENT_channel_array
+ 197              	 .section .data.ADC_MEASUREMENT_channel_array,"aw",%progbits
  198              	 .align 2
- 201              	VDC_ch_config:
- 202 0000 02       	 .byte 2
- 203 0001 00       	 .byte 0
- 204 0002 2A       	 .byte 42
- 205 0003 00       	 .byte 0
- 206 0004 00000000 	 .word 0
- 207 0008 00000000 	 .space 4
- 208 000c 00       	 .byte 0
- 209 000d FF       	 .byte -1
- 210 000e 0000     	 .space 2
- 211              	 .global VDC_res_config
- 212              	 .section .bss.VDC_res_config,"aw",%nobits
- 213              	 .align 2
- 216              	VDC_res_config:
- 217 0000 00000000 	 .space 4
- 218              	 .global ADC_MEASUREMENT_VDC_handle
- 219              	 .section .data.ADC_MEASUREMENT_VDC_handle,"aw",%progbits
- 220              	 .align 2
- 223              	ADC_MEASUREMENT_VDC_handle:
- 224 0000 00000000 	 .word VDC_ch_config
- 225 0004 00000000 	 .word VDC_res_config
- 226 0008 00080348 	 .word 1208158208
- 227 000c 01       	 .byte 1
- 228 000d 07       	 .byte 7
- 229 000e 0000     	 .space 2
- 230              	 .global Current_PhaseU_ch_config
- 231              	 .section .data.Current_PhaseU_ch_config,"aw",%progbits
- 232              	 .align 2
- 235              	Current_PhaseU_ch_config:
- 236 0000 02       	 .byte 2
- 237 0001 00       	 .byte 0
- 238 0002 22       	 .byte 34
- 239 0003 00       	 .byte 0
- 240 0004 00000000 	 .word 0
- 241 0008 00000000 	 .space 4
- 242 000c 00       	 .byte 0
- 243 000d 05       	 .byte 5
- 244 000e 0000     	 .space 2
- 245              	 .global Current_PhaseU_res_config
- 246              	 .section .bss.Current_PhaseU_res_config,"aw",%nobits
- 247              	 .align 2
- 250              	Current_PhaseU_res_config:
- 251 0000 00000000 	 .space 4
- 252              	 .global ADC_MEASUREMENT_Current_PhaseU_handle
- 253              	 .section .data.ADC_MEASUREMENT_Current_PhaseU_handle,"aw",%progbits
- 254              	 .align 2
- 257              	ADC_MEASUREMENT_Current_PhaseU_handle:
- 258 0000 00000000 	 .word Current_PhaseU_ch_config
- 259 0004 00000000 	 .word Current_PhaseU_res_config
- 260 0008 00040348 	 .word 1208157184
- 261 000c 00       	 .byte 0
- 262 000d 01       	 .byte 1
- 263 000e 0000     	 .space 2
- 264              	 .global Current_PhaseV_ch_config
- 265              	 .section .data.Current_PhaseV_ch_config,"aw",%progbits
- 266              	 .align 2
- 269              	Current_PhaseV_ch_config:
- 270 0000 02       	 .byte 2
- 271 0001 00       	 .byte 0
- 272 0002 27       	 .byte 39
- 273 0003 00       	 .byte 0
- 274 0004 00000000 	 .word 0
- 275 0008 00000000 	 .space 4
- 276 000c 00       	 .byte 0
- 277 000d FF       	 .byte -1
- 278 000e 0000     	 .space 2
- 279              	 .global Current_PhaseV_res_config
- 280              	 .section .bss.Current_PhaseV_res_config,"aw",%nobits
- 281              	 .align 2
- 284              	Current_PhaseV_res_config:
- 285 0000 00000000 	 .space 4
- 286              	 .global ADC_MEASUREMENT_Current_PhaseV_handle
- 287              	 .section .data.ADC_MEASUREMENT_Current_PhaseV_handle,"aw",%progbits
- 288              	 .align 2
- 291              	ADC_MEASUREMENT_Current_PhaseV_handle:
- 292 0000 00000000 	 .word Current_PhaseV_ch_config
- 293 0004 00000000 	 .word Current_PhaseV_res_config
- 294 0008 00040348 	 .word 1208157184
- 295 000c 00       	 .byte 0
- 296 000d 06       	 .byte 6
- 297 000e 0000     	 .space 2
- 298              	 .global Current_PhaseW_ch_config
- 299              	 .section .data.Current_PhaseW_ch_config,"aw",%progbits
- 300              	 .align 2
- 303              	Current_PhaseW_ch_config:
- 304 0000 02       	 .byte 2
- 305 0001 00       	 .byte 0
- 306 0002 29       	 .byte 41
- 307 0003 00       	 .byte 0
- 308 0004 00000000 	 .word 0
- 309 0008 00000000 	 .space 4
- 310 000c 00       	 .byte 0
- 311 000d FF       	 .byte -1
- 312 000e 0000     	 .space 2
- 313              	 .global Current_PhaseW_res_config
- 314              	 .section .bss.Current_PhaseW_res_config,"aw",%nobits
- 315              	 .align 2
- 318              	Current_PhaseW_res_config:
- 319 0000 00000000 	 .space 4
- 320              	 .global ADC_MEASUREMENT_Current_PhaseW_handle
- 321              	 .section .data.ADC_MEASUREMENT_Current_PhaseW_handle,"aw",%progbits
- 322              	 .align 2
- 325              	ADC_MEASUREMENT_Current_PhaseW_handle:
- 326 0000 00000000 	 .word Current_PhaseW_ch_config
- 327 0004 00000000 	 .word Current_PhaseW_res_config
- 328 0008 00040348 	 .word 1208157184
- 329 000c 00       	 .byte 0
- 330 000d 07       	 .byte 7
- 331 000e 0000     	 .space 2
- 332              	 .global ADC_MEASUREMENT_channel_array
- 333              	 .section .data.ADC_MEASUREMENT_channel_array,"aw",%progbits
- 334              	 .align 2
- 337              	ADC_MEASUREMENT_channel_array:
- 338 0000 00000000 	 .word ADC_MEASUREMENT_Voltage_PhaseU_handle
- 339 0004 00000000 	 .word ADC_MEASUREMENT_Voltage_PhaseV_handle
- 340 0008 00000000 	 .word ADC_MEASUREMENT_Voltage_PhaseW_handle
- 341 000c 00000000 	 .word ADC_MEASUREMENT_Temp_Feedback_handle
- 342 0010 00000000 	 .word ADC_MEASUREMENT_Temp_Ref_handle
- 343 0014 00000000 	 .word ADC_MEASUREMENT_VDC_handle
- 344 0018 00000000 	 .word ADC_MEASUREMENT_Current_PhaseU_handle
- 345 001c 00000000 	 .word ADC_MEASUREMENT_Current_PhaseV_handle
- 346 0020 00000000 	 .word ADC_MEASUREMENT_Current_PhaseW_handle
- 347              	 .global backgnd_config
- 348              	 .section .rodata.backgnd_config,"a",%progbits
- 349              	 .align 2
- 352              	backgnd_config:
- 353 0000 05       	 .byte 5
- 354 0001 000000   	 .space 3
- 355 0004 00       	 .space 1
- 356 0005 00       	 .byte 0
- 357 0006 00       	 .byte 0
- 358 0007 00       	 .byte 0
- 359 0008 10       	 .byte 16
- 360 0009 000000   	 .space 3
- 361              	 .global ADC_MEASUREMENT_0
- 362              	 .section .data.ADC_MEASUREMENT_0,"aw",%progbits
- 363              	 .align 2
- 366              	ADC_MEASUREMENT_0:
- 367 0000 00000000 	 .word ADC_MEASUREMENT_channel_array
- 368 0004 00000000 	 .word backgnd_config
- 369 0008 00000000 	 .word global_iclass_config
- 370 000c 00000000 	 .word GLOBAL_ADC_0
- 371 0010 00000000 	 .word 0
- 372 0014 00000000 	 .word 0
- 373 0018 02       	 .byte 2
- 374 0019 04       	 .byte 4
- 375 001a 01       	 .byte 1
- 376 001b 00       	 .space 1
- 377              	 .text
- 378              	.Letext0:
- 379              	 .file 1 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 380              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 381              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
- 382              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/XMCLib/inc/xmc_vadc.h"
- 383              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Dave/Generated/GLOBAL_ADC/global_adc.h"
- 384              	 .file 6 "../Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
- 385              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Include/cmsis_gcc.h"
- 386              	 .file 8 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
- 387              	 .file 9 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotor/Dave/Generated/GLOBAL_ADC/global_adc_extern.h"
- 388              	 .file 10 "../Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.c"
+ 201              	ADC_MEASUREMENT_channel_array:
+ 202 0000 00000000 	 .word ADC_MEASUREMENT_Button_1_handle
+ 203 0004 00000000 	 .word ADC_MEASUREMENT_Current_PhaseU_handle
+ 204 0008 00000000 	 .word ADC_MEASUREMENT_Current_PhaseV_handle
+ 205 000c 00000000 	 .word ADC_MEASUREMENT_Current_PhaseW_handle
+ 206 0010 00000000 	 .word ADC_MEASUREMENT_VDC_handle
+ 207              	 .global backgnd_rs_intr_handle
+ 208              	 .section .rodata.backgnd_rs_intr_handle,"a",%progbits
+ 209              	 .align 2
+ 212              	backgnd_rs_intr_handle:
+ 213 0000 0F000000 	 .word 15
+ 214 0004 03000000 	 .word 3
+ 215              	 .global backgnd_config
+ 216              	 .section .rodata.backgnd_config,"a",%progbits
+ 217              	 .align 2
+ 220              	backgnd_config:
+ 221 0000 05       	 .byte 5
+ 222 0001 000000   	 .space 3
+ 223 0004 00       	 .space 1
+ 224 0005 00       	 .byte 0
+ 225 0006 00       	 .byte 0
+ 226 0007 00       	 .byte 0
+ 227 0008 18       	 .byte 24
+ 228 0009 000000   	 .space 3
+ 229              	 .global ADC_MEASUREMENT_0
+ 230              	 .section .data.ADC_MEASUREMENT_0,"aw",%progbits
+ 231              	 .align 2
+ 234              	ADC_MEASUREMENT_0:
+ 235 0000 00000000 	 .word ADC_MEASUREMENT_channel_array
+ 236 0004 00000000 	 .word backgnd_config
+ 237 0008 00000000 	 .word global_iclass_config
+ 238 000c 00000000 	 .word GLOBAL_ADC_0
+ 239 0010 00000000 	 .word backgnd_rs_intr_handle
+ 240 0014 00000000 	 .word 0
+ 241 0018 02       	 .byte 2
+ 242 0019 04       	 .byte 4
+ 243 001a 01       	 .byte 1
+ 244 001b 00       	 .space 1
+ 245              	 .text
+ 246              	.Letext0:
+ 247              	 .file 1 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 248              	 .file 2 "d:\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 249              	 .file 3 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+ 250              	 .file 4 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/XMCLib/inc/xmc_vadc.h"
+ 251              	 .file 5 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Dave/Generated/GLOBAL_ADC/global_adc.h"
+ 252              	 .file 6 "../Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
+ 253              	 .file 7 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 254              	 .file 8 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 255              	 .file 9 "D:/DAVE IDE/4.5.0.202105191637/eclipse/workspace/bldcmotorv1.0/Dave/Generated/GLOBAL_ADC/global_adc_extern.h"
+ 256              	 .file 10 "../Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.c"
 DEFINED SYMBOLS
                             *ABS*:00000000 adc_measurement_conf.c
     {standard input}:22     .rodata.global_iclass_config:00000000 global_iclass_config
     {standard input}:19     .rodata.global_iclass_config:00000000 $d
-    {standard input}:31     .data.Voltage_PhaseU_ch_config:00000000 Voltage_PhaseU_ch_config
-    {standard input}:28     .data.Voltage_PhaseU_ch_config:00000000 $d
-    {standard input}:46     .bss.Voltage_PhaseU_res_config:00000000 Voltage_PhaseU_res_config
-    {standard input}:43     .bss.Voltage_PhaseU_res_config:00000000 $d
-    {standard input}:53     .data.ADC_MEASUREMENT_Voltage_PhaseU_handle:00000000 ADC_MEASUREMENT_Voltage_PhaseU_handle
-    {standard input}:50     .data.ADC_MEASUREMENT_Voltage_PhaseU_handle:00000000 $d
-    {standard input}:65     .data.Voltage_PhaseV_ch_config:00000000 Voltage_PhaseV_ch_config
-    {standard input}:62     .data.Voltage_PhaseV_ch_config:00000000 $d
-    {standard input}:80     .bss.Voltage_PhaseV_res_config:00000000 Voltage_PhaseV_res_config
-    {standard input}:77     .bss.Voltage_PhaseV_res_config:00000000 $d
-    {standard input}:87     .data.ADC_MEASUREMENT_Voltage_PhaseV_handle:00000000 ADC_MEASUREMENT_Voltage_PhaseV_handle
-    {standard input}:84     .data.ADC_MEASUREMENT_Voltage_PhaseV_handle:00000000 $d
-    {standard input}:99     .data.Voltage_PhaseW_ch_config:00000000 Voltage_PhaseW_ch_config
-    {standard input}:96     .data.Voltage_PhaseW_ch_config:00000000 $d
-    {standard input}:114    .bss.Voltage_PhaseW_res_config:00000000 Voltage_PhaseW_res_config
-    {standard input}:111    .bss.Voltage_PhaseW_res_config:00000000 $d
-    {standard input}:121    .data.ADC_MEASUREMENT_Voltage_PhaseW_handle:00000000 ADC_MEASUREMENT_Voltage_PhaseW_handle
-    {standard input}:118    .data.ADC_MEASUREMENT_Voltage_PhaseW_handle:00000000 $d
-    {standard input}:133    .data.Temp_Feedback_ch_config:00000000 Temp_Feedback_ch_config
-    {standard input}:130    .data.Temp_Feedback_ch_config:00000000 $d
-    {standard input}:148    .bss.Temp_Feedback_res_config:00000000 Temp_Feedback_res_config
-    {standard input}:145    .bss.Temp_Feedback_res_config:00000000 $d
-    {standard input}:155    .data.ADC_MEASUREMENT_Temp_Feedback_handle:00000000 ADC_MEASUREMENT_Temp_Feedback_handle
-    {standard input}:152    .data.ADC_MEASUREMENT_Temp_Feedback_handle:00000000 $d
-    {standard input}:167    .data.Temp_Ref_ch_config:00000000 Temp_Ref_ch_config
-    {standard input}:164    .data.Temp_Ref_ch_config:00000000 $d
-    {standard input}:182    .bss.Temp_Ref_res_config:00000000 Temp_Ref_res_config
-    {standard input}:179    .bss.Temp_Ref_res_config:00000000 $d
-    {standard input}:189    .data.ADC_MEASUREMENT_Temp_Ref_handle:00000000 ADC_MEASUREMENT_Temp_Ref_handle
-    {standard input}:186    .data.ADC_MEASUREMENT_Temp_Ref_handle:00000000 $d
-    {standard input}:201    .data.VDC_ch_config:00000000 VDC_ch_config
-    {standard input}:198    .data.VDC_ch_config:00000000 $d
-    {standard input}:216    .bss.VDC_res_config:00000000 VDC_res_config
-    {standard input}:213    .bss.VDC_res_config:00000000 $d
-    {standard input}:223    .data.ADC_MEASUREMENT_VDC_handle:00000000 ADC_MEASUREMENT_VDC_handle
-    {standard input}:220    .data.ADC_MEASUREMENT_VDC_handle:00000000 $d
-    {standard input}:235    .data.Current_PhaseU_ch_config:00000000 Current_PhaseU_ch_config
-    {standard input}:232    .data.Current_PhaseU_ch_config:00000000 $d
-    {standard input}:250    .bss.Current_PhaseU_res_config:00000000 Current_PhaseU_res_config
-    {standard input}:247    .bss.Current_PhaseU_res_config:00000000 $d
-    {standard input}:257    .data.ADC_MEASUREMENT_Current_PhaseU_handle:00000000 ADC_MEASUREMENT_Current_PhaseU_handle
-    {standard input}:254    .data.ADC_MEASUREMENT_Current_PhaseU_handle:00000000 $d
-    {standard input}:269    .data.Current_PhaseV_ch_config:00000000 Current_PhaseV_ch_config
-    {standard input}:266    .data.Current_PhaseV_ch_config:00000000 $d
-    {standard input}:284    .bss.Current_PhaseV_res_config:00000000 Current_PhaseV_res_config
-    {standard input}:281    .bss.Current_PhaseV_res_config:00000000 $d
-    {standard input}:291    .data.ADC_MEASUREMENT_Current_PhaseV_handle:00000000 ADC_MEASUREMENT_Current_PhaseV_handle
-    {standard input}:288    .data.ADC_MEASUREMENT_Current_PhaseV_handle:00000000 $d
-    {standard input}:303    .data.Current_PhaseW_ch_config:00000000 Current_PhaseW_ch_config
-    {standard input}:300    .data.Current_PhaseW_ch_config:00000000 $d
-    {standard input}:318    .bss.Current_PhaseW_res_config:00000000 Current_PhaseW_res_config
-    {standard input}:315    .bss.Current_PhaseW_res_config:00000000 $d
-    {standard input}:325    .data.ADC_MEASUREMENT_Current_PhaseW_handle:00000000 ADC_MEASUREMENT_Current_PhaseW_handle
-    {standard input}:322    .data.ADC_MEASUREMENT_Current_PhaseW_handle:00000000 $d
-    {standard input}:337    .data.ADC_MEASUREMENT_channel_array:00000000 ADC_MEASUREMENT_channel_array
-    {standard input}:334    .data.ADC_MEASUREMENT_channel_array:00000000 $d
-    {standard input}:352    .rodata.backgnd_config:00000000 backgnd_config
-    {standard input}:349    .rodata.backgnd_config:00000000 $d
-    {standard input}:366    .data.ADC_MEASUREMENT_0:00000000 ADC_MEASUREMENT_0
-    {standard input}:363    .data.ADC_MEASUREMENT_0:00000000 $d
+    {standard input}:31     .data.Button_1_ch_config:00000000 Button_1_ch_config
+    {standard input}:28     .data.Button_1_ch_config:00000000 $d
+    {standard input}:46     .bss.Button_1_res_config:00000000 Button_1_res_config
+    {standard input}:43     .bss.Button_1_res_config:00000000 $d
+    {standard input}:53     .data.ADC_MEASUREMENT_Button_1_handle:00000000 ADC_MEASUREMENT_Button_1_handle
+    {standard input}:50     .data.ADC_MEASUREMENT_Button_1_handle:00000000 $d
+    {standard input}:65     .data.Current_PhaseU_ch_config:00000000 Current_PhaseU_ch_config
+    {standard input}:62     .data.Current_PhaseU_ch_config:00000000 $d
+    {standard input}:80     .bss.Current_PhaseU_res_config:00000000 Current_PhaseU_res_config
+    {standard input}:77     .bss.Current_PhaseU_res_config:00000000 $d
+    {standard input}:87     .data.ADC_MEASUREMENT_Current_PhaseU_handle:00000000 ADC_MEASUREMENT_Current_PhaseU_handle
+    {standard input}:84     .data.ADC_MEASUREMENT_Current_PhaseU_handle:00000000 $d
+    {standard input}:99     .data.Current_PhaseV_ch_config:00000000 Current_PhaseV_ch_config
+    {standard input}:96     .data.Current_PhaseV_ch_config:00000000 $d
+    {standard input}:114    .bss.Current_PhaseV_res_config:00000000 Current_PhaseV_res_config
+    {standard input}:111    .bss.Current_PhaseV_res_config:00000000 $d
+    {standard input}:121    .data.ADC_MEASUREMENT_Current_PhaseV_handle:00000000 ADC_MEASUREMENT_Current_PhaseV_handle
+    {standard input}:118    .data.ADC_MEASUREMENT_Current_PhaseV_handle:00000000 $d
+    {standard input}:133    .data.Current_PhaseW_ch_config:00000000 Current_PhaseW_ch_config
+    {standard input}:130    .data.Current_PhaseW_ch_config:00000000 $d
+    {standard input}:148    .bss.Current_PhaseW_res_config:00000000 Current_PhaseW_res_config
+    {standard input}:145    .bss.Current_PhaseW_res_config:00000000 $d
+    {standard input}:155    .data.ADC_MEASUREMENT_Current_PhaseW_handle:00000000 ADC_MEASUREMENT_Current_PhaseW_handle
+    {standard input}:152    .data.ADC_MEASUREMENT_Current_PhaseW_handle:00000000 $d
+    {standard input}:167    .data.VDC_ch_config:00000000 VDC_ch_config
+    {standard input}:164    .data.VDC_ch_config:00000000 $d
+    {standard input}:182    .bss.VDC_res_config:00000000 VDC_res_config
+    {standard input}:179    .bss.VDC_res_config:00000000 $d
+    {standard input}:189    .data.ADC_MEASUREMENT_VDC_handle:00000000 ADC_MEASUREMENT_VDC_handle
+    {standard input}:186    .data.ADC_MEASUREMENT_VDC_handle:00000000 $d
+    {standard input}:201    .data.ADC_MEASUREMENT_channel_array:00000000 ADC_MEASUREMENT_channel_array
+    {standard input}:198    .data.ADC_MEASUREMENT_channel_array:00000000 $d
+    {standard input}:212    .rodata.backgnd_rs_intr_handle:00000000 backgnd_rs_intr_handle
+    {standard input}:209    .rodata.backgnd_rs_intr_handle:00000000 $d
+    {standard input}:220    .rodata.backgnd_config:00000000 backgnd_config
+    {standard input}:217    .rodata.backgnd_config:00000000 $d
+    {standard input}:234    .data.ADC_MEASUREMENT_0:00000000 ADC_MEASUREMENT_0
+    {standard input}:231    .data.ADC_MEASUREMENT_0:00000000 $d
 
 UNDEFINED SYMBOLS
 GLOBAL_ADC_0

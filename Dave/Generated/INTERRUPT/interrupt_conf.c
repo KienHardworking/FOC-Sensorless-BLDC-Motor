@@ -67,14 +67,14 @@
 const INTERRUPT_t INTERRUPT_0 =
 {
 #if(UC_SERIES == XMC14)
- .irqctrl = (XMC_SCU_IRQCTRL_t)1U,
+ .irqctrl = (XMC_SCU_IRQCTRL_t)0U,
 #endif
-  .node = (IRQn_Type)21,
+  .node = (IRQn_Type)0,
   .priority = 3,  
 #if(UC_FAMILY == XMC4)  
   .subpriority = 0,
 #endif  
 
-  .enable_at_init = true
-
+/* sr_irq signal is not connected to any peripheral */
+  .enable_at_init = false 
 };

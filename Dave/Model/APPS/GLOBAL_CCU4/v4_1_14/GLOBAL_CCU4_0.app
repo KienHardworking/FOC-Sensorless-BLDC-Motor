@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="GLOBAL_CCU4" URI="http://resources/4.1.14/app/GLOBAL_CCU4/0" description="Initializes CCU4 Global Register Set." version="4.1.14" minDaveVersion="4.0.0" instanceLabel="GLOBAL_CCU4_0" appLabel="">
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../TIMER/v4_1_12/TIMER_0.app#//@requiredApps.0"/>
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../TIMER/v4_1_12/TIMER_1.app#//@requiredApps.0"/>
   <properties provideInit="true" sharable="true"/>
   <virtualSignals name="ccu4_global" URI="http://resources/4.1.14/app/GLOBAL_CCU4/0/vs_global_ccu4_globalsignal" hwSignal="global_signal" hwResource="//@hwResources.0">
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../TIMER/v4_1_12/TIMER_0.app#//@connections.0"/>
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../TIMER/v4_1_12/TIMER_1.app#//@connections.0"/>
   </virtualSignals>
   <virtualSignals name="clock_ccu" URI="http://resources/4.1.14/app/GLOBAL_CCU4/0/vs_global_ccu4_clk" hwSignal="clk" hwResource="//@hwResources.0"/>
   <virtualSignals name="ccu4_global_start" URI="http://resources/4.1.14/app/GLOBAL_CCU4/0/vs_global_ccu4_gsc_enable" hwSignal="gsc_enable" hwResource="//@hwResources.1" visible="true"/>
@@ -22,7 +20,7 @@
     </solverVarMap>
   </hwResources>
   <hwResources name="CCU4 sync start" URI="http://resources/4.1.14/app/GLOBAL_CCU4/0/hwres_peripheral_scu_gcu_ccu4_global_enable" resourceGroupUri="peripheral/scu/*/gcu/ccu4_global_enable/sv0" solverVariable="true" mResGrpUri="peripheral/scu/*/gcu/ccu4_global_enable/sv0">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/scu/scu_0.dd#//@provided.3"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/scu/scu_0.dd#//@provided.4"/>
     <solverVarMap index="5">
       <value variableName="sv0" solverValue="0"/>
     </solverVarMap>

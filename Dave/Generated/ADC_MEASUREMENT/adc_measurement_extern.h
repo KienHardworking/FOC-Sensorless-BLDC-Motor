@@ -101,15 +101,11 @@
  * MACROS
  **********************************************************************************************************************/
 
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseU_handle;
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseV_handle;
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseW_handle;
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Temp_Feedback_handle;
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Temp_Ref_handle;
- extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_VDC_handle;
+ extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Button_1_handle;
  extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseU_handle;
  extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseV_handle;
  extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseW_handle;
+ extern ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_VDC_handle;
 
 /***********************************************************************************************************************
  * EXTERN DECLARATIONS

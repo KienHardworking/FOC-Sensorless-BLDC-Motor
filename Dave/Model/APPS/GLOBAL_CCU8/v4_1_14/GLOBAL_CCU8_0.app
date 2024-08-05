@@ -24,7 +24,7 @@
     </solverVarMap>
   </hwResources>
   <hwResources name="CCU8 sync start" URI="http://resources/4.1.14/app/GLOBAL_CCU8/0/hwres_peripheral_scu_gcu_ccu8_global_enable" resourceGroupUri="peripheral/scu/*/gcu/ccu8_global_enable/sv0" solverVariable="true" mResGrpUri="peripheral/scu/*/gcu/ccu8_global_enable/sv0">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/scu/scu_0.dd#//@provided.5"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/scu/scu_0.dd#//@provided.3"/>
     <solverVarMap index="5">
       <value variableName="sv0" solverValue="0"/>
     </solverVarMap>

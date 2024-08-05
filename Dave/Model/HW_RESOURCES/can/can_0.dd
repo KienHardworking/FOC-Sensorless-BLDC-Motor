@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/14.0.0/peripheral/can/0" description="Controller Area Networks" baseAddress="0x50040000">
+  <provided xsi:type="ResourceModel:ResourceGroup" name="global" URI="http://resources/14.0.0/peripheral/can/0/global">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CAN/v4_0_20/GLOBAL_CAN_0.app#//@hwResources.0"/>
+    <resourcesList name="clc" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/clc"/>
+    <resourcesList name="fdr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/fdr"/>
+    <resourcesList name="id" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/id"/>
+    <resourcesList name="mcr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mcr"/>
+    <resourcesList name="msimask" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msimask"/>
+    <resourcesList name="mitr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mitr"/>
+    <resourcesList name="moipr0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo0_moipr"/>
+    <resourcesList name="moipr1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo1_moipr"/>
+    <resourcesList name="moipr2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo2_moipr"/>
+    <resourcesList name="moipr3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo3_moipr"/>
+    <resourcesList name="moipr4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo4_moipr"/>
+    <resourcesList name="moipr5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo5_moipr"/>
+    <resourcesList name="moipr6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo6_moipr"/>
+    <resourcesList name="moipr7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo7_moipr"/>
+    <resourcesList name="moipr8" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo8_moipr"/>
+    <resourcesList name="moipr9" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo9_moipr"/>
+    <resourcesList name="moipr10" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo10_moipr"/>
+    <resourcesList name="moipr11" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo11_moipr"/>
+    <resourcesList name="moipr12" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo12_moipr"/>
+    <resourcesList name="moipr13" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo13_moipr"/>
+    <resourcesList name="moipr14" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo14_moipr"/>
+    <resourcesList name="moipr15" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo15_moipr"/>
+    <resourcesList name="msid0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid0"/>
+    <resourcesList name="msid1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid1"/>
+    <resourcesList name="msid2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid2"/>
+    <resourcesList name="msid3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid3"/>
+    <resourcesList name="msid4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid4"/>
+    <resourcesList name="msid5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid5"/>
+    <resourcesList name="msid6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid6"/>
+    <resourcesList name="msid7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid7"/>
+    <resourcesList name="mspnd0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd0"/>
+    <resourcesList name="mspnd1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd1"/>
+    <resourcesList name="mspnd2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd2"/>
+    <resourcesList name="mspnd3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd3"/>
+    <resourcesList name="mspnd4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd4"/>
+    <resourcesList name="mspnd5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd5"/>
+    <resourcesList name="mspnd6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd6"/>
+    <resourcesList name="mspnd7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd7"/>
+    <resourcesList name="panctr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/panctr"/>
+    <resourcesList name="global_signal" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/global_global_signal"/>
+  </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/14.0.0/peripheral/can/0/node/1">
     <resourcesList name="list" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/list2"/>
     <resourcesList name="nbtr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/node1_nbtr"/>
@@ -123,49 +166,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="#0001" description="Interrupt output line INT_O1 is selected."/>
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="#1110" description="Interrupt output line INT_O14 is selected."/>
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="#1111" description="Interrupt output line INT_O15 is selected."/>
-  </provided>
-  <provided xsi:type="ResourceModel:ResourceGroup" name="global" URI="http://resources/14.0.0/peripheral/can/0/global">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CAN/v4_0_20/GLOBAL_CAN_0.app#//@hwResources.0"/>
-    <resourcesList name="clc" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/clc"/>
-    <resourcesList name="fdr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/fdr"/>
-    <resourcesList name="id" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/id"/>
-    <resourcesList name="mcr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mcr"/>
-    <resourcesList name="msimask" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msimask"/>
-    <resourcesList name="mitr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mitr"/>
-    <resourcesList name="moipr0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo0_moipr"/>
-    <resourcesList name="moipr1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo1_moipr"/>
-    <resourcesList name="moipr2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo2_moipr"/>
-    <resourcesList name="moipr3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo3_moipr"/>
-    <resourcesList name="moipr4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo4_moipr"/>
-    <resourcesList name="moipr5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo5_moipr"/>
-    <resourcesList name="moipr6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo6_moipr"/>
-    <resourcesList name="moipr7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo7_moipr"/>
-    <resourcesList name="moipr8" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo8_moipr"/>
-    <resourcesList name="moipr9" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo9_moipr"/>
-    <resourcesList name="moipr10" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo10_moipr"/>
-    <resourcesList name="moipr11" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo11_moipr"/>
-    <resourcesList name="moipr12" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo12_moipr"/>
-    <resourcesList name="moipr13" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo13_moipr"/>
-    <resourcesList name="moipr14" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo14_moipr"/>
-    <resourcesList name="moipr15" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mo15_moipr"/>
-    <resourcesList name="msid0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid0"/>
-    <resourcesList name="msid1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid1"/>
-    <resourcesList name="msid2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid2"/>
-    <resourcesList name="msid3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid3"/>
-    <resourcesList name="msid4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid4"/>
-    <resourcesList name="msid5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid5"/>
-    <resourcesList name="msid6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid6"/>
-    <resourcesList name="msid7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/msid7"/>
-    <resourcesList name="mspnd0" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd0"/>
-    <resourcesList name="mspnd1" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd1"/>
-    <resourcesList name="mspnd2" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd2"/>
-    <resourcesList name="mspnd3" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd3"/>
-    <resourcesList name="mspnd4" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd4"/>
-    <resourcesList name="mspnd5" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd5"/>
-    <resourcesList name="mspnd6" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd6"/>
-    <resourcesList name="mspnd7" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/mspnd7"/>
-    <resourcesList name="panctr" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/panctr"/>
-    <resourcesList name="global_signal" requiredResourceUri="http://resources/14.0.0/peripheral/can/0/global_global_signal"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/14.0.0/peripheral/can/0/node/0">
     <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/CAN_NODE/v4_1_24/CAN_NODE_0.app#//@hwResources.2"/>

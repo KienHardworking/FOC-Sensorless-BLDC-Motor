@@ -100,24 +100,11 @@
  **********************************************************************************************************************/
 
 
-#define ADC_MEASUREMENT_MAXCHANNELS (9U)
-#define ADC_MEASUREMENT_Voltage_PhaseU (ADC_MEASUREMENT_Voltage_PhaseU_handle)
-#define ADC_MEASUREMENT_Voltage_PhaseU_RES (VADC_G0->RES[1])
+#define ADC_MEASUREMENT_MAXCHANNELS (5U)
 
-#define ADC_MEASUREMENT_Voltage_PhaseV (ADC_MEASUREMENT_Voltage_PhaseV_handle)
-#define ADC_MEASUREMENT_Voltage_PhaseV_RES (VADC_G1->RES[12])
-
-#define ADC_MEASUREMENT_Voltage_PhaseW (ADC_MEASUREMENT_Voltage_PhaseW_handle)
-#define ADC_MEASUREMENT_Voltage_PhaseW_RES (VADC_G1->RES[5])
-
-#define ADC_MEASUREMENT_Temp_Feedback (ADC_MEASUREMENT_Temp_Feedback_handle)
-#define ADC_MEASUREMENT_Temp_Feedback_RES (VADC_G1->RES[4])
-
-#define ADC_MEASUREMENT_Temp_Ref (ADC_MEASUREMENT_Temp_Ref_handle)
-#define ADC_MEASUREMENT_Temp_Ref_RES (VADC_G1->RES[11])
-
-#define ADC_MEASUREMENT_VDC (ADC_MEASUREMENT_VDC_handle)
-#define ADC_MEASUREMENT_VDC_RES (VADC_G1->RES[10])
+#define Adc_Measurement_Handler IRQ_Hdlr_15
+#define ADC_MEASUREMENT_Button_1 (ADC_MEASUREMENT_Button_1_handle)
+#define ADC_MEASUREMENT_Button_1_RES (VADC_G1->RES[10])
 
 #define ADC_MEASUREMENT_Current_PhaseU (ADC_MEASUREMENT_Current_PhaseU_handle)
 #define ADC_MEASUREMENT_Current_PhaseU_RES (VADC_G0->RES[2])
@@ -128,6 +115,11 @@
 #define ADC_MEASUREMENT_Current_PhaseW (ADC_MEASUREMENT_Current_PhaseW_handle)
 #define ADC_MEASUREMENT_Current_PhaseW_RES (VADC_G0->RES[9])
 
+#define ADC_MEASUREMENT_VDC (ADC_MEASUREMENT_VDC_handle)
+#define ADC_MEASUREMENT_VDC_RES (VADC_G1->RES[11])
+
+
+#define ADC_MEASUREMENT_CPU_1X
 #define ADC_MEASUREMENT_ICLASS_NUM (0U)
 #define ADC_MEASUREMENT_MAJOR_VERSION (4U) /**< Major version number of ADC_MEASUREMENT APP*/
 #define ADC_MEASUREMENT_MINOR_VERSION (1U) /**< Minor version number of ADC_MEASUREMENT APP*/

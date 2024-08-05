@@ -84,20 +84,20 @@ XMC_CCU4_SLICE_COMPARE_CONFIG_t TIMER_0_config =
 
 TIMER_t TIMER_0 = 
 {
-  .ccu4_slice_ptr         = (XMC_CCU4_SLICE_t*) CCU41_CC41,
+  .ccu4_slice_ptr         = (XMC_CCU4_SLICE_t*) CCU40_CC41,
   .ccu4_slice_number      = 1U,
-  .time_interval_value_us = 10000U,
+  .time_interval_value_us = 100U,
   .timer_max_value_us     = 2236928000U,
   .timer_min_value_us     = 10U,
-  .global_ccu4_handler    = (GLOBAL_CCU4_t*)&GLOBAL_CCU4_1, 
+  .global_ccu4_handler    = (GLOBAL_CCU4_t*)&GLOBAL_CCU4_0, 
   .ccu4_slice_config_ptr  = (XMC_CCU4_SLICE_COMPARE_CONFIG_t*)&TIMER_0_config,
   .shadow_mask            = (uint32_t)((uint32_t)XMC_CCU4_SHADOW_TRANSFER_SLICE_1 | 
                                        (uint32_t)XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_1),
   .ccu4_period_match_node = XMC_CCU4_SLICE_SR_ID_0,
   .timer_module           = TIMER_MODULE_CCU4,
-  .period_value           = 9599U,
+  .period_value           = 95U,
   .start_control          = true,
-  .period_match_enable    = true,
+  .period_match_enable    = false,
   .initialized            = false
 };
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="bldcmotor" Path="D:\DAVE IDE\4.5.0.202105191637\eclipse\workspace\bldcmotor">
+<Project MotherSystem_Version="" Name="bldcmotorv1.0" Path="D:\DAVE IDE\4.5.0.202105191637\eclipse\workspace\bldcmotorv1.0">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>
@@ -19,6 +19,16 @@
             <Source_File>
                 <File_Name>adc_measurement_conf.c</File_Name>
                 <Path>\Dave\Generated\ADC_MEASUREMENT\adc_measurement_conf.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>can_node.c</File_Name>
+                <Path>\Dave\Generated\CAN_NODE\can_node.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>can_node_conf.c</File_Name>
+                <Path>\Dave\Generated\CAN_NODE\can_node_conf.c</Path>
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
@@ -47,6 +57,16 @@
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
+                <File_Name>digital_io.c</File_Name>
+                <Path>\Dave\Generated\DIGITAL_IO\digital_io.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>digital_io_conf.c</File_Name>
+                <Path>\Dave\Generated\DIGITAL_IO\digital_io_conf.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
                 <File_Name>global_adc.c</File_Name>
                 <Path>\Dave\Generated\GLOBAL_ADC\global_adc.c</Path>
                 <Type>C File</Type>
@@ -54,6 +74,16 @@
             <Source_File>
                 <File_Name>global_adc_conf.c</File_Name>
                 <Path>\Dave\Generated\GLOBAL_ADC\global_adc_conf.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>global_can.c</File_Name>
+                <Path>\Dave\Generated\GLOBAL_CAN\global_can.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>global_can_conf.c</File_Name>
+                <Path>\Dave\Generated\GLOBAL_CAN\global_can_conf.c</Path>
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
@@ -77,26 +107,6 @@
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
-                <File_Name>global_posif.c</File_Name>
-                <Path>\Dave\Generated\GLOBAL_POSIF\global_posif.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
-                <File_Name>global_posif_conf.c</File_Name>
-                <Path>\Dave\Generated\GLOBAL_POSIF\global_posif_conf.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
-                <File_Name>hall_posif.c</File_Name>
-                <Path>\Dave\Generated\HALL_POSIF\hall_posif.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
-                <File_Name>hall_posif_conf.c</File_Name>
-                <Path>\Dave\Generated\HALL_POSIF\hall_posif_conf.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
                 <File_Name>interrupt.c</File_Name>
                 <Path>\Dave\Generated\INTERRUPT\interrupt.c</Path>
                 <Type>C File</Type>
@@ -104,16 +114,6 @@
             <Source_File>
                 <File_Name>interrupt_conf.c</File_Name>
                 <Path>\Dave\Generated\INTERRUPT\interrupt_conf.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
-                <File_Name>pwm_ccu4.c</File_Name>
-                <Path>\Dave\Generated\PWM_CCU4\pwm_ccu4.c</Path>
-                <Type>C File</Type>
-            </Source_File>
-            <Source_File>
-                <File_Name>pwm_ccu4_conf.c</File_Name>
-                <Path>\Dave\Generated\PWM_CCU4\pwm_ccu4_conf.c</Path>
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
@@ -146,6 +146,16 @@
                 <Path>\Dave\Generated\TIMER\timer_conf.c</Path>
                 <Type>C File</Type>
             </Source_File>
+            <Source_File>
+                <File_Name>uart.c</File_Name>
+                <Path>\Dave\Generated\UART\uart.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>uart_conf.c</File_Name>
+                <Path>\Dave\Generated\UART\uart_conf.c</Path>
+                <Type>C File</Type>
+            </Source_File>
         </Source_Files>
         <Header_Files>
             <Header_File>
@@ -161,6 +171,21 @@
             <Header_File>
                 <File_Name>adc_measurement_extern.h</File_Name>
                 <Path>\Dave\Generated\ADC_MEASUREMENT\adc_measurement_extern.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>can_node.h</File_Name>
+                <Path>\Dave\Generated\CAN_NODE\can_node.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>can_node_conf.h</File_Name>
+                <Path>\Dave\Generated\CAN_NODE\can_node_conf.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>can_node_extern.h</File_Name>
+                <Path>\Dave\Generated\CAN_NODE\can_node_extern.h</Path>
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
@@ -204,6 +229,21 @@
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
+                <File_Name>digital_io.h</File_Name>
+                <Path>\Dave\Generated\DIGITAL_IO\digital_io.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>digital_io_conf.h</File_Name>
+                <Path>\Dave\Generated\DIGITAL_IO\digital_io_conf.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>digital_io_extern.h</File_Name>
+                <Path>\Dave\Generated\DIGITAL_IO\digital_io_extern.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
                 <File_Name>global_adc.h</File_Name>
                 <Path>\Dave\Generated\GLOBAL_ADC\global_adc.h</Path>
                 <Type>H File</Type>
@@ -216,6 +256,21 @@
             <Header_File>
                 <File_Name>global_adc_extern.h</File_Name>
                 <Path>\Dave\Generated\GLOBAL_ADC\global_adc_extern.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>global_can.h</File_Name>
+                <Path>\Dave\Generated\GLOBAL_CAN\global_can.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>global_can_conf.h</File_Name>
+                <Path>\Dave\Generated\GLOBAL_CAN\global_can_conf.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>global_can_extern.h</File_Name>
+                <Path>\Dave\Generated\GLOBAL_CAN\global_can_extern.h</Path>
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
@@ -249,36 +304,6 @@
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
-                <File_Name>global_posif.h</File_Name>
-                <Path>\Dave\Generated\GLOBAL_POSIF\global_posif.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>global_posif_conf.h</File_Name>
-                <Path>\Dave\Generated\GLOBAL_POSIF\global_posif_conf.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>global_posif_extern.h</File_Name>
-                <Path>\Dave\Generated\GLOBAL_POSIF\global_posif_extern.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>hall_posif.h</File_Name>
-                <Path>\Dave\Generated\HALL_POSIF\hall_posif.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>hall_posif_conf.h</File_Name>
-                <Path>\Dave\Generated\HALL_POSIF\hall_posif_conf.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>hall_posif_extern.h</File_Name>
-                <Path>\Dave\Generated\HALL_POSIF\hall_posif_extern.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
                 <File_Name>interrupt.h</File_Name>
                 <Path>\Dave\Generated\INTERRUPT\interrupt.h</Path>
                 <Type>H File</Type>
@@ -291,21 +316,6 @@
             <Header_File>
                 <File_Name>interrupt_extern.h</File_Name>
                 <Path>\Dave\Generated\INTERRUPT\interrupt_extern.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>pwm_ccu4.h</File_Name>
-                <Path>\Dave\Generated\PWM_CCU4\pwm_ccu4.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>pwm_ccu4_conf.h</File_Name>
-                <Path>\Dave\Generated\PWM_CCU4\pwm_ccu4_conf.h</Path>
-                <Type>H File</Type>
-            </Header_File>
-            <Header_File>
-                <File_Name>pwm_ccu4_extern.h</File_Name>
-                <Path>\Dave\Generated\PWM_CCU4\pwm_ccu4_extern.h</Path>
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
@@ -351,6 +361,21 @@
             <Header_File>
                 <File_Name>timer_extern.h</File_Name>
                 <Path>\Dave\Generated\TIMER\timer_extern.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>uart.h</File_Name>
+                <Path>\Dave\Generated\UART\uart.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>uart_conf.h</File_Name>
+                <Path>\Dave\Generated\UART\uart_conf.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>uart_extern.h</File_Name>
+                <Path>\Dave\Generated\UART\uart_extern.h</Path>
                 <Type>H File</Type>
             </Header_File>
         </Header_Files>

@@ -64,13 +64,11 @@
 ***********************************************************************************************************************/
 
 
-    extern PWM_CCU8_t PWM_HV;
+    extern PWM_CCU8_t PWM_CCU8_0;
 
-    extern PWM_CCU8_t PWM_LV;
+    extern PWM_CCU8_t PWM_CCU8_1;
 
-    extern PWM_CCU8_t PWM_HW;
-
-    extern PWM_CCU8_t PWM_LW;
+    extern PWM_CCU8_t PWM_CCU8_2;
 
 #endif
 

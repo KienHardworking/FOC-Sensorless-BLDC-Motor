@@ -55,6 +55,9 @@
 #include "CPU_CTRL_XMC1/cpu_ctrl_xmc1.h"
   
 
+#include "UART/uart.h"
+  
+
 #include "SYSTIMER/systimer.h"
   
 
@@ -64,28 +67,28 @@
 #include "ADC_MEASUREMENT/adc_measurement.h"
   
 
-#include "GLOBAL_POSIF/global_posif.h"
-  
-
-#include "GLOBAL_CCU4/global_ccu4.h"
-  
-
-#include "HALL_POSIF/hall_posif.h"
-  
-
 #include "GLOBAL_CCU8/global_ccu8.h"
   
 
 #include "PWM_CCU8/pwm_ccu8.h"
   
 
-#include "PWM_CCU4/pwm_ccu4.h"
+#include "GLOBAL_CCU4/global_ccu4.h"
   
 
 #include "TIMER/timer.h"
   
 
 #include "INTERRUPT/interrupt.h"
+  
+
+#include "DIGITAL_IO/digital_io.h"
+  
+
+#include "GLOBAL_CAN/global_can.h"
+  
+
+#include "CAN_NODE/can_node.h"
   
 	
 

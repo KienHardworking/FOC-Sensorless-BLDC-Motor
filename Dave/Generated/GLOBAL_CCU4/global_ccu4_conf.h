@@ -63,8 +63,7 @@
 #define GLOBAL_CCU4_PATCH_VERSION (14U)
 
 
-#define GLOBAL_CCU4_CCUCON_Msk ((uint32_t)XMC_SCU_CCU_TRIGGER_CCU40 |\
-                                XMC_SCU_CCU_TRIGGER_CCU41)
+#define GLOBAL_CCU4_CCUCON_Msk ((uint32_t)XMC_SCU_CCU_TRIGGER_CCU40)
 
 #endif /* GLOBAL_CCU4_CONF_H_ */
 

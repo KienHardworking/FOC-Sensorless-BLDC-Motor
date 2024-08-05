@@ -74,6 +74,11 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
+	 /**  Initialization of UART APP instance UART_0 */
+	 init_status = (DAVE_STATUS_t)UART_Init(&UART_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
 	 /**  Initialization of SYSTIMER APP instance SYSTIMER_0 */
 	 init_status = (DAVE_STATUS_t)SYSTIMER_Init(&SYSTIMER_0); 
    } 
@@ -84,38 +89,8 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
-	 /**  Initialization of HALL_POSIF APP instance HALL_POSIF_0 */
-	 init_status = (DAVE_STATUS_t)HALL_POSIF_Init(&HALL_POSIF_0); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU8 APP instance PWM_HV */
-	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_HV); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU4 APP instance PWM_HU */
-	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_HU); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU4 APP instance PWM_LU */
-	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_LU); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU8 APP instance PWM_LV */
-	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_LV); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU8 APP instance PWM_HW */
-	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_HW); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of PWM_CCU8 APP instance PWM_LW */
-	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_LW); 
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_0 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_0); 
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
@@ -126,6 +101,26 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
   {
 	 /**  Initialization of INTERRUPT APP instance INTERRUPT_0 */
 	 init_status = (DAVE_STATUS_t)INTERRUPT_Init(&INTERRUPT_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_0 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of CAN_NODE APP instance CAN_NODE_0 */
+	 init_status = (DAVE_STATUS_t)CAN_NODE_Init(&CAN_NODE_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_1 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_1); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_2 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_2); 
    }  
   return init_status;
 } /**  End of function DAVE_Init */

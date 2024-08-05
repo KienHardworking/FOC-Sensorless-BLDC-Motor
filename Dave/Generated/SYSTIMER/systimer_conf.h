@@ -78,10 +78,10 @@
 #define SYSTIMER_SYSTICK_CLOCK   (48000000U)
  
 /**< SysTick interval in seconds */ 
-#define SYSTIMER_TICK_PERIOD  (0.00001F)
+#define SYSTIMER_TICK_PERIOD  (0.00005F)
  
 /**< SysTick interval in microseconds */ 
-#define SYSTIMER_TICK_PERIOD_US  (10U)
+#define SYSTIMER_TICK_PERIOD_US  (50U)
  
 /**< Maximum No of timer */
 #define SYSTIMER_CFG_MAX_TMR  (8U)

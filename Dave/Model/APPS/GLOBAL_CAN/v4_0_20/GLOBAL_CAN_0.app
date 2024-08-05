@@ -6,6 +6,6 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../CLOCK_XMC1/v4_0_26/CLOCK_XMC1_0.app#/"/>
   </requiredApps>
   <hwResources name=" GLOBAL_CAN" URI="http://resources/4.0.20/app/GLOBAL_CAN/0/hwres_can_global" resourceGroupUri="peripheral/can/*/global" mResGrpUri="peripheral/can/*/global">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/can/can_0.dd#//@provided.12"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/can/can_0.dd#//@provided.0"/>
   </hwResources>
 </ResourceModel:App>

@@ -107,226 +107,11 @@ const  XMC_VADC_GLOBAL_CLASS_t global_iclass_config =
 
 /******************************* CHANNEL CONFIG *******************************/
 
-/*********************** Voltage_PhaseU Configurations ************************************/
+/*********************** Button_1 Configurations ************************************/
 
 
-/*Voltage_PhaseU ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  Voltage_PhaseU_ch_config =
-{
-  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
-  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
-  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
-  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
-  .result_reg_number          = (uint32_t) 1,                           /* GxRES[1] selected */
-  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
-  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
-  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
-  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
-  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
-  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
-};
-
-/*Voltage_PhaseU Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t Voltage_PhaseU_res_config =
-{
-  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
-  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
-  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
-  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
-  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
-};
-
-/* Voltage_PhaseU ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseU_handle =
-{
-  .ch_num        = (uint8_t) 0,
-  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G0,
-  .group_index	 = (uint8_t) 0,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Voltage_PhaseU_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Voltage_PhaseU_res_config, 
-};
-
-
-/*********************** Voltage_PhaseV Configurations ************************************/
-
-
-/*Voltage_PhaseV ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  Voltage_PhaseV_ch_config =
-{
-  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
-  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
-  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
-  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
-  .result_reg_number          = (uint32_t) 12,                           /* GxRES[12] selected */
-  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
-  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
-  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
-  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
-  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
-  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) 1  /* Channel is Aliased*/
-};
-
-/*Voltage_PhaseV Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t Voltage_PhaseV_res_config =
-{
-  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
-  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
-  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
-  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
-  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
-};
-
-/* Voltage_PhaseV ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseV_handle =
-{
-  .ch_num        = (uint8_t) 0,
-  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
-  .group_index	 = (uint8_t) 1,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Voltage_PhaseV_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Voltage_PhaseV_res_config, 
-};
-
-
-/*********************** Voltage_PhaseW Configurations ************************************/
-
-
-/*Voltage_PhaseW ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  Voltage_PhaseW_ch_config =
-{
-  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
-  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
-  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
-  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
-  .result_reg_number          = (uint32_t) 5,                           /* GxRES[5] selected */
-  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
-  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
-  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
-  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
-  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
-  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) 0  /* Channel is Aliased*/
-};
-
-/*Voltage_PhaseW Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t Voltage_PhaseW_res_config =
-{
-  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
-  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
-  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
-  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
-  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
-};
-
-/* Voltage_PhaseW ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Voltage_PhaseW_handle =
-{
-  .ch_num        = (uint8_t) 1,
-  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
-  .group_index	 = (uint8_t) 1,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Voltage_PhaseW_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Voltage_PhaseW_res_config, 
-};
-
-
-/*********************** Temp_Feedback Configurations ************************************/
-
-
-/*Temp_Feedback ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  Temp_Feedback_ch_config =
-{
-  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
-  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
-  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
-  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
-  .result_reg_number          = (uint32_t) 4,                           /* GxRES[4] selected */
-  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
-  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
-  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
-  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
-  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
-  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
-};
-
-/*Temp_Feedback Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t Temp_Feedback_res_config =
-{
-  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
-  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
-  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
-  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
-  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
-};
-
-/* Temp_Feedback ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Temp_Feedback_handle =
-{
-  .ch_num        = (uint8_t) 5,
-  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
-  .group_index	 = (uint8_t) 1,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Temp_Feedback_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Temp_Feedback_res_config, 
-};
-
-
-/*********************** Temp_Ref Configurations ************************************/
-
-
-/*Temp_Ref ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  Temp_Ref_ch_config =
-{
-  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
-  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
-  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
-  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
-  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
-  .result_reg_number          = (uint32_t) 11,                           /* GxRES[11] selected */
-  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
-  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
-  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
-  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
-  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
-  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
-};
-
-/*Temp_Ref Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t Temp_Ref_res_config =
-{
-  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
-  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
-  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
-  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
-  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
-};
-
-/* Temp_Ref ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Temp_Ref_handle =
-{
-  .ch_num        = (uint8_t) 6,
-  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
-  .group_index	 = (uint8_t) 1,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Temp_Ref_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Temp_Ref_res_config, 
-};
-
-
-/*********************** VDC Configurations ************************************/
-
-
-/*VDC ADC Channel configuration structure*/
-XMC_VADC_CHANNEL_CONFIG_t  VDC_ch_config =
+/*Button_1 ADC Channel configuration structure*/
+XMC_VADC_CHANNEL_CONFIG_t  Button_1_ch_config =
 {
   .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
   .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
@@ -344,8 +129,8 @@ XMC_VADC_CHANNEL_CONFIG_t  VDC_ch_config =
   .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
 };
 
-/*VDC Result configuration structure*/
-XMC_VADC_RESULT_CONFIG_t VDC_res_config =
+/*Button_1 Result configuration structure*/
+XMC_VADC_RESULT_CONFIG_t Button_1_res_config =
 {
   .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
   .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
@@ -354,14 +139,14 @@ XMC_VADC_RESULT_CONFIG_t VDC_res_config =
   .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
 };
 
-/* VDC ADC channel Handle */
-ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_VDC_handle =
+/* Button_1 ADC channel Handle */
+ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Button_1_handle =
 {
   .ch_num        = (uint8_t) 7,
   .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
   .group_index	 = (uint8_t) 1,
-  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &VDC_ch_config,
-  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &VDC_res_config, 
+  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Button_1_ch_config,
+  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &Button_1_res_config, 
 };
 
 
@@ -400,7 +185,7 @@ XMC_VADC_RESULT_CONFIG_t Current_PhaseU_res_config =
 /* Current_PhaseU ADC channel Handle */
 ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseU_handle =
 {
-  .ch_num        = (uint8_t) 1,
+  .ch_num        = (uint8_t) 0,
   .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G0,
   .group_index	 = (uint8_t) 0,
   .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Current_PhaseU_ch_config,
@@ -427,7 +212,7 @@ XMC_VADC_CHANNEL_CONFIG_t  Current_PhaseV_ch_config =
   .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
   .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
   .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
-  .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
+  .alias_channel              = (int8_t) 6  /* Channel is Aliased*/
 };
 
 /*Current_PhaseV Result configuration structure*/
@@ -443,7 +228,7 @@ XMC_VADC_RESULT_CONFIG_t Current_PhaseV_res_config =
 /* Current_PhaseV ADC channel Handle */
 ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseV_handle =
 {
-  .ch_num        = (uint8_t) 6,
+  .ch_num        = (uint8_t) 1,
   .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G0,
   .group_index	 = (uint8_t) 0,
   .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &Current_PhaseV_ch_config,
@@ -494,23 +279,68 @@ ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_Current_PhaseW_handle =
 };
 
 
+/*********************** VDC Configurations ************************************/
+
+
+/*VDC ADC Channel configuration structure*/
+XMC_VADC_CHANNEL_CONFIG_t  VDC_ch_config =
+{
+  .input_class                = (uint32_t) XMC_VADC_CHANNEL_CONV_GLOBAL_CLASS0,  /* Global ICLASS 0 selected */
+  .lower_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
+  .upper_boundary_select 	  = (uint32_t) XMC_VADC_CHANNEL_BOUNDARY_GROUP_BOUND0,
+  .event_gen_criteria         = (uint32_t) XMC_VADC_CHANNEL_EVGEN_NEVER, /*Channel Event disabled */
+  .sync_conversion  		  = (uint32_t) 0,                            /* Sync feature disabled*/
+  .alternate_reference        = (uint32_t) XMC_VADC_CHANNEL_REF_INTREF,  /* Internal reference selected */
+  .result_reg_number          = (uint32_t) 11,                           /* GxRES[11] selected */
+  .use_global_result          = (uint32_t) 0, 				             /* Use Group result register*/
+  .result_alignment           = (uint32_t) XMC_VADC_RESULT_ALIGN_RIGHT,  /* Result alignment - Right Aligned*/
+  .broken_wire_detect_channel = (uint32_t) XMC_VADC_CHANNEL_BWDCH_VAGND, /* No Broken wire mode select*/
+  .broken_wire_detect		  = (uint32_t) 0,    		                 /* No Broken wire detection*/
+  .bfl                        = (uint32_t) 0,                            /* No Boundary flag */
+  .channel_priority           = (uint32_t) 0,                   		 /* Lowest Priority 0 selected*/
+  .alias_channel              = (int8_t) -1,                         /* ALIAS is Disabled*/
+};
+
+/*VDC Result configuration structure*/
+XMC_VADC_RESULT_CONFIG_t VDC_res_config =
+{
+  .data_reduction_control  = (uint8_t) 0,  /* No Accumulation */
+  .post_processing_mode    = (uint32_t) XMC_VADC_DMM_REDUCTION_MODE,
+  .wait_for_read_mode  	   = (uint32_t) 0,  /* Disabled */
+  .part_of_fifo       	   = (uint32_t) 0 , /* No FIFO */
+  .event_gen_enable   	   = (uint32_t) 0   /* Disable Result event */
+};
+
+/* VDC ADC channel Handle */
+ADC_MEASUREMENT_CHANNEL_t ADC_MEASUREMENT_VDC_handle =
+{
+  .ch_num        = (uint8_t) 3,
+  .group_handle  = (VADC_G_TypeDef*)(void*) VADC_G1,
+  .group_index	 = (uint8_t) 1,
+  .ch_handle	 = (XMC_VADC_CHANNEL_CONFIG_t*) &VDC_ch_config,
+  .res_handle	 = (XMC_VADC_RESULT_CONFIG_t*) &VDC_res_config, 
+};
+
+
 /* ADC_MEASUREMENT channel handles */
 ADC_MEASUREMENT_CHANNEL_ARRAY_t ADC_MEASUREMENT_channel_array=
 {
   .channel_array =
     {
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Voltage_PhaseU_handle,
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Voltage_PhaseV_handle,
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Voltage_PhaseW_handle,
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Temp_Feedback_handle,
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Temp_Ref_handle,
-      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_VDC_handle,
+      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Button_1_handle,
       (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Current_PhaseU_handle,
       (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Current_PhaseV_handle,
       (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_Current_PhaseW_handle,
+      (ADC_MEASUREMENT_CHANNEL_t *)&ADC_MEASUREMENT_VDC_handle,
     }
 };
 
+/* Background request source interrupt handler : End of Measurement Interrupt configuration structure*/
+const ADC_MEASUREMENT_ISR_t backgnd_rs_intr_handle=
+{
+  .node_id      = 15U,
+  .priority    	= 3U 
+};
 
 /* LLD Background Scan Init Structure */
 const XMC_VADC_BACKGROUND_CONFIG_t backgnd_config =
@@ -522,7 +352,7 @@ const XMC_VADC_BACKGROUND_CONFIG_t backgnd_config =
   .gate_signal    	 = (uint32_t) XMC_VADC_REQ_GT_A,			 /*If Gating needed then this denotes the Gating signal*/
   .timer_mode        = (uint32_t) 0,							 /*Timer Mode Disabled */
   .external_trigger  = (uint32_t) 0,                               /*Trigger is Disabled*/
-  .req_src_interrupt = (uint32_t) 0,                              /*Background Request source interrupt Disabled*/
+  .req_src_interrupt = (uint32_t) 1,                              /*Background Request source interrupt Enabled*/
   .enable_auto_scan  = (uint32_t) 1,
   .load_mode         = (uint32_t) XMC_VADC_SCAN_LOAD_OVERWRITE
 };
@@ -531,7 +361,7 @@ ADC_MEASUREMENT_t ADC_MEASUREMENT_0=
 {
   .array		 	     = (ADC_MEASUREMENT_CHANNEL_ARRAY_t*) &ADC_MEASUREMENT_channel_array,
   .backgnd_config_handle = (XMC_VADC_BACKGROUND_CONFIG_t*) &backgnd_config,
-  .req_src_intr_handle	 = (ADC_MEASUREMENT_ISR_t *) NULL,
+  .req_src_intr_handle	 = (ADC_MEASUREMENT_ISR_t *) &backgnd_rs_intr_handle,
   .iclass_config_handle  = ( XMC_VADC_GLOBAL_CLASS_t *) &global_iclass_config,
   .srv_req_node          = XMC_VADC_SR_SHARED_SR0,
   .global_handle    	 = (GLOBAL_ADC_t *) &GLOBAL_ADC_0,

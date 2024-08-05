@@ -56,32 +56,15 @@
     </bitFields>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="RTCCLKSEL" URI="http://resources/14.0.0/peripheral/scu/0/clk_clkcr/rtcclksel" value="0x00000000" toolTipHelpDescription="RTC Clock Select" defaultValue="0x00000000" startPos="17" stopPos="19" accessPermission="rw" maxValue="7" minValue="0"/>
-  <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/14.0.0/peripheral/scu/0/gcu/ccu4_global_enable/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_0.app#//@hwResources.1"/>
-    <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/ccucon/gsc40"/>
-    <resourcesList name="gsc_enable" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/gcu_ccu4_global_enable0_gsc_enable"/>
-  </provided>
-  <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/14.0.0/peripheral/scu/0/gcu/ccu4_global_enable/1">
-    <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/ccucon/gsc41"/>
-    <resourcesList name="gsc_enable" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/gcu_ccu4_global_enable1_gsc_enable"/>
-  </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/14.0.0/peripheral/scu/0/gcu/ccu8_global_enable/0">
     <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU8/v4_1_14/GLOBAL_CCU8_0.app#//@hwResources.1"/>
     <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/ccucon/gsc80"/>
     <resourcesList name="gsc_enable" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/gcu_ccu8_global_enable0_gsc_enable"/>
   </provided>
-  <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/14.0.0/peripheral/scu/0/cmpcu/anacmp/2">
-    <resourcesList name="acmp_cmp_en" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/comparator_anacmp2/cmp_en"/>
-    <resourcesList name="acmp_cmp_flt_off" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/comparator_anacmp2/cmp_flt_off"/>
-    <resourcesList name="acmp_cmp_hyst_adj" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/comparator_anacmp2/cmp_hyst_adj"/>
-    <resourcesList name="acmp_cmp_inv_out" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/comparator_anacmp2/cmp_inv_out"/>
-    <resourcesList name="acmp_cmp_out" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/comparator_anacmp2/cmp_out"/>
-    <resourcesList name="inp" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/cmpcu_anacmp2_inp"/>
-    <resourcesList name="inn" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/cmpcu_anacmp2_inn"/>
-    <resourcesList name="out" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/cmpcu_anacmp2_out"/>
-  </provided>
-  <provided xsi:type="ResourceModel:ResourceGroup" name="acmp_powermode" URI="http://resources/14.0.0/peripheral/scu/0/cmpcu/acmp_powermode">
-    <resourcesList name="anacmp0_cmp_lpwr" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/anacmp0/cmp_lpwr"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/14.0.0/peripheral/scu/0/gcu/ccu4_global_enable/0">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_0.app#//@hwResources.1"/>
+    <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/ccucon/gsc40"/>
+    <resourcesList name="gsc_enable" requiredResourceUri="http://resources/14.0.0/peripheral/scu/0/gcu_ccu4_global_enable0_gsc_enable"/>
   </provided>
   <addressBlock offset="0x0" size="0x200" usage="registers"/>
 </ResourceModel:Peripheral>

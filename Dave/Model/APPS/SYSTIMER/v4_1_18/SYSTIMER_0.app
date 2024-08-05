@@ -8,6 +8,6 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../CPU_CTRL_XMC1/v4_0_12/CPU_CTRL_XMC1_0.app#/"/>
   </requiredApps>
   <hwResources name="syst" URI="http://resources/4.1.18/app/SYSTIMER/0/hwres_syst" resourceGroupUri="peripheral/cpu/0/systick" mResGrpUri="peripheral/cpu/0/systick">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/cpu/cpu_0.dd#//@provided.1"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/cpu/cpu_0.dd#//@provided.9"/>
   </hwResources>
 </ResourceModel:App>

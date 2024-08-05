@@ -66,8 +66,8 @@
  
 
 /* Moudule and Kernel Pointers */
-#define TIMER_0_KERNEL_PTR (XMC_CCU4_MODULE_t*)(void *)CCU41_BASE
-#define TIMER_0_SLICE_PTR  (XMC_CCU4_SLICE_t*)(void *)CCU41_CC41
+#define TIMER_0_KERNEL_PTR (XMC_CCU4_MODULE_t*)(void *)CCU40_BASE
+#define TIMER_0_SLICE_PTR  (XMC_CCU4_SLICE_t*)(void *)CCU40_CC41
 /* Shadow transfer masks */
 #define TIMER_0_SLICE_SH_MSK      XMC_CCU4_SHADOW_TRANSFER_SLICE_1
 #define TIMER_0_PRESCALER_SH_MSK  XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_1
@@ -77,9 +77,6 @@
 
 /** This enables the functionality for the CCU4 timer */
 #define TIMER_CCU4_USED
-
-/** This enables the Interrupt functionality */
-#define TIMER_INTERRUPT
 
 #endif /* TIMER_CONF_H */
 
