@@ -47,10 +47,10 @@ float b2BEMFobs=0;
 uint16_t da=0,db=0,dc=0;
 float d0=0,d1=0,d2=0;
 
+uint16_t OpenLoop=1;
+uint16_t ChangeMode=1;
 
-float tmp,tmp1;
-uint16_t count=0,count1=0,flag=1,flag1=0,flag2=0;
-
+uint16_t Startup_Lock_Count = 0;
 
 float SineTheta=0;
 float CosineTheta=0;
@@ -65,9 +65,12 @@ float closeLoopTHI=0;
 float closeLoopTHO=0;
 float deviationTH=0;
 float decayRateTH=0;
+float closeLoopTHstate=0;
+
 float SUMdTH=0;
 float SpeedMea1=0;
 float SpeedMea=0;
+float SpeedRef=0;
 float FIFOdTH[21];
 
 
@@ -96,6 +99,7 @@ float Usq1=0;
 float Usq=0;
 float Kp_Usq;
 float Ki_Usq;
+
 
 float Usalpha=0,Usbeta=0;
 float Usa=0,Usb=0,Usc=0;
@@ -897,3 +901,103 @@ void SinCosCheck(void){
 	    y1 = CosineTable[y0_IndexNext];
 	    CosineTheta = y0 + ((y1 - y0)*temp);
 }
+/*
+ Function:Reset mot so bien khi thay doi tu openloop sang closeloop va khi bat dau vao openloop. Thuc hien tinh toan ra Usd, Usq de chuyen he toa do nguoc lai ve alpha-beta->abc de
+ dung cho thuat toan SVM ( openloop va closeloop).
+ */
+void LoopcontrolTask( void )
+{
+    if( OpenLoop==1 )
+    {
+        if( ChangeMode ==1)
+        {
+            ChangeMode = 0;
+            IsqRef = 0;
+            Startup_Lock_Count = 0;
+            Startup_Ramp_Angle_Rads_Per_Sec = 0;
+        }
+        IsqRef = IsqRef_OPENLOOP;
+        UsqCal();
+        UsdCal;
+    }
+    else
+    {
+        if( ChangeMode==1 )
+        {
+            ChangeMode = 0;
+            SpeedRef = END_SPEED_RADS_PER_SEC_ELEC;
+        }
+        SpeedMea = SpeedMea1;
+        IsqRefCal();
+        UsqCal();
+        UsdCal();
+    }
+}
+/*
+ Function: Dua goc dong co ve gia tri nam trong dai 0 den 2pi
+ */
+static inline float WrapFrom0To2Pi(float raw){
+    float tmp;
+
+    if(0.0 > raw)
+    {
+        tmp = raw + (float)(2.0f*(float)M_PI);
+    }
+    else if((float)(2.0f*(float)M_PI) < raw)
+    {
+        tmp = raw - (float)(2.0f*(float)M_PI);
+    }
+    else
+    {
+        tmp = raw;
+    }
+
+    return tmp;
+}
+/*
+ Function:Khi bat dau vao trang thai closeloop can giam do chenh lech giua goc openloop va goc uoc luong bang ham tinh toan, sau do dung goc uoc luong tinh toan thanh goc closeloop.
+ THI: ThresholdInput, THO:ThresholdOutput (Giai thich: THI ung voi theta1=w.t1, THO ung voi theta2=w.t2 voi w la van toc goc rad/s tuc goc quet duoc la delta=w(t2-t1) (t2>t1).
+ positionTHI va positionTHO duoc tinh toan tu ham positionCal()
+ Input:Theta, positionTHI, positionTHO
+ Output:closeloopTHI, closeloopTHO
+ */
+static inline void CloseLoopTHcal(void){
+    float tmp1;
+
+    tmp1 = Theta;
+
+    switch(closeLoopTHstate)
+    {
+        case 0:
+            deviationTH = tmp1 - positionTH;
+            decayRateTH = deviationTH * RL_1D_2SCNT;
+            closeLoopTHI = tmp1;
+            closeLoopTHO = tmp1;
+            closeLoopTHstate= 1;
+            break;
+        case 1:
+            if(((0<decayRateTH) && (deviationTH>decayRateTH)) ||
+            ((0>decayRateTH) && (deviationTH<decayRateTH)))
+            {
+                deviationTH = deviationTH - decayRateTH;
+                tmp1 = deviationTH + positionTHI;
+                closeLoopTHI = WrapFrom0To2Pi(tmp1);
+                tmp1 = deviationTH + positionTHO;
+                closeLoopTHO = WrapFrom0To2Pi(tmp1);
+            }
+            else
+            {
+                closeLoopTHI =  positionTHI;
+                closeLoopTHO =  positionTHO;
+                closeLoopTHstate = 2;
+            }
+            break;
+        case 2u:
+            closeLoopTHI =  positionTHI;
+            closeLoopTHO =  positionTHO;
+            break;
+        default:
+            break;
+    }
+}
+

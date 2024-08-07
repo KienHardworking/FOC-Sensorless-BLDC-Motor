@@ -11,8 +11,10 @@
 
 
 #define IsqRef_OPENLOOP (float)0.3
-#define END_SPEED_RADS_PER_SEC_ELEC_IN_LOOPTIME (float)((float)((float)(((float)(500)/60.0f)*(float)(2.0f*3.141592))*(float)1.0f)*(float)0.00005)
-#define SpeedRef (float)((float)((float)(((float)(1000)/60.0f)*(float)(2.0f*3.141592))*(float)1.0f))
+#define RL_1D_2SCNT (float)(1.0f / (float)(2.0f * (float)(20000U)))
+#define END_SPEED_RADS_PER_SEC_ELEC (float)((float)(((float)(500)/60.0f) * (float)(2.0f*(float)M_PI)) * (float)1.0f)
+#define END_SPEED_RADS_PER_SEC_ELEC_IN_LOOPTIME (float)((float)((float)(((float)(500)/60.0f) * (float)(2.0f*(float)M_PI)) * (float)1.0f) * (float)0.00005)
+#define SpeedRef_user (float)((float)((float)(((float)(1000)/60.0f)*(float)(2.0f*3.141592))*(float)1.0f))
 #define sqrt_2 ((float)1.41421)
 #define sqrt_3 ((float)1.73205)
 #define one_on_sqrt_2 ((float)0.7071)
