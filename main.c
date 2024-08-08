@@ -24,9 +24,7 @@ float ADC_scale=max_motor_current/1433;
 float cumulative_sum_phaseU=0;
 float moving_average_phaseU=0;
 
-float OPENLOOP_RAMPSPEED_INCREASERATE=END_SPEED_RADS_PER_SEC_ELEC_IN_LOOPTIME/((float)(5)*(float)(0.00005));
-
-
+uint16_t flagStartObs=0;
 float aIObs=(float)(exp(F));
 float b1IObs=(float)((exp(F)-1.0f)/Rs);
 float b2IObs=(float)(-((exp(F)-1.0f)/Rs));
@@ -51,6 +49,7 @@ uint16_t OpenLoop=1;
 uint16_t ChangeMode=1;
 
 uint16_t Startup_Lock_Count = 0;
+uint16_t Speed_Maintain_Cnt1=0;
 
 float SineTheta=0;
 float CosineTheta=0;
@@ -1001,3 +1000,68 @@ static inline void CloseLoopTHcal(void){
     }
 }
 
+/*
+ Function:Tinh toan goc dong co cho openloop, closeloop de su dung cho Park va Inverse Park chuyen he toa do alphabeta sang dq va nguoc lai.
+ Input:Theta
+ Output:finalTHI, finalTHO
+ */
+void ThetaCal(void)
+{
+	if(OpenLoop==1)
+    {
+            Theta += Startup_Ramp_Angle_Rads_Per_Sec;
+            if(Theta >= (float)(2.0f*(float)M_PI))
+            {
+                Theta = Theta - (float)(2.0f*(float)M_PI);
+            }
+		if (Startup_Lock_Count < LOCK_COUNT_FOR_LOCK_TIME)
+        {
+            Startup_Lock_Count++;
+            Startup_Ramp_Angle_Rads_Per_Sec = 0;
+            Theta = 0;
+            SpeedRef = Startup_Ramp_Angle_Rads_Per_Sec/Ts;
+        }
+        else if (Startup_Ramp_Angle_Rads_Per_Sec < END_SPEED_RADS_PER_SEC_ELEC_IN_LOOPTIME)
+        {
+			Startup_Ramp_Angle_Rads_Per_Sec += OPENLOOP_RAMPSPEED_INCREASERATE;
+        }
+        else if(Speed_Maintain_Cnt1 < (uint32_t)PWM_FREQ)
+        {
+            Speed_Maintain_Cnt1++;
+            SpeedRef = END_SPEED_RADS_PER_SEC_ELEC;
+            flagStartObs = 2;
+        }
+        else
+        {
+                float tmp1;
+                tmp1 = Theta - positionTH;
+                if((float)-M_PI > tmp1)
+                {
+                    deviationTH = tmp1 + (float)(2.0*M_PI);
+                }
+                else if((float)M_PI < tmp1)
+                {
+                    deviationTH = tmp1 - (float)(2.0*M_PI);
+                }
+                else
+                {
+                    deviationTH = tmp1;
+                }
+                decayRateTH = deviationTH * RL_1D_2SCNT;
+                closeLoopTHstate = 1;
+                ChangeMode = 1;
+                OpenLoop = 0;
+		}
+
+        finalTHI = Theta;
+        finalTHO = Theta;
+	}
+    else
+    {
+        CloseLoopTHcal();
+        finalTHI = closeLoopTHI;
+        finalTHO = closeLoopTHO;
+	}
+
+	return;
+}

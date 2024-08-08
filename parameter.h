@@ -38,6 +38,8 @@
 #define CURRENT_OFFSET_MAX 1482
 #define CURRENT_OFFSET_MIN 1384
 #define MOVING_AVG_WINDOW_SIZE 18
+#define LOCK_COUNT_FOR_LOCK_TIME (float)((float)(2U)/(float)(float)0.00005)
+#define OPENLOOP_RAMPSPEED_INCREASERATE (float)((float)((float)((float)(((float)(500)/60.0f) * (float)(2.0f*(float)M_PI)) * (float)1.0f) * (float)0.00005)/((float)(5)/(float)0.00005))
 
 
 #endif /* PARAMETER_H_ */
