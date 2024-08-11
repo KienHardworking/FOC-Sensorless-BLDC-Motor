@@ -216,4 +216,5 @@
   <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@connections.5"/>
   <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@connections.4"/>
   <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@connections.5"/>
+  <hwConnections href="APPS/TIMER/v4_1_12/TIMER_0.app#//@connections.2"/>
 </ApplicationModel:ApplicationData>

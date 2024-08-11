@@ -9,7 +9,10 @@
 #define PARAMETER_H_
 #include "math.h"
 
-
+#define RL_EPSILON_F ((float)0.00000001)
+#define RL_A ((float)0.0776509570923569)
+#define RL_B ((float)-0.287434475393028)
+#define RL_C (float)(M_PI_4 - ((float)0.0776509570923569) - ((float)-0.287434475393028))
 #define IsqRef_OPENLOOP (float)0.3
 #define RL_1D_2SCNT (float)(1.0f / (float)(2.0f * (float)(20000U)))
 #define END_SPEED_RADS_PER_SEC_ELEC (float)((float)(((float)(500)/60.0f) * (float)(2.0f*(float)M_PI)) * (float)1.0f)

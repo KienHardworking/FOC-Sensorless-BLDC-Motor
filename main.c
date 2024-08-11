@@ -71,6 +71,8 @@ float SpeedMea1=0;
 float SpeedMea=0;
 float SpeedRef=0;
 float FIFOdTH[21];
+float We;
+uint16_t countFIFO=0;
 
 
 float current_u=0;
@@ -1064,4 +1066,329 @@ void ThetaCal(void)
 	}
 
 	return;
+}
+
+/*
+ Function:lay gia tri tuyet doi cua bien vao
+ Input:x
+ Output:tri tuyet doi cua x
+ */
+float floatAbs(float x)
+{
+    float tmp;
+
+    if(0 < x)
+    {
+        tmp = x;
+    }
+    else
+    {
+        tmp = -x;
+    }
+
+    return tmp;
+}
+/*
+ Function:tinh toan xap xi sin cua goc dua vao ham
+ Input:x
+ Output:sin(x)
+ */
+float sinChebyshevF(float x)
+{
+    float y;
+    float tmp1;
+    float tmp2;
+
+    if((float)M_PI_2 < x)
+    {
+        y = (float)M_PI - x;
+    }
+    else if((float)(-M_PI_2) > x)
+    {
+        y = (float)(-M_PI) - x;
+    }
+    else
+    {
+        y = x;
+    }
+
+    tmp1 = y * y;
+    tmp2 = y * (CHEB_SIN_1 + tmp1 * (CHEB_SIN_3 + (tmp1 * CHEB_SIN_5)));
+
+    return tmp2;
+}
+/*
+ Function:tinh toan xap xi cos cua goc dua vao ham
+ Input:x
+ Output:cos(x)
+ */
+float cosChebyshevF(float x)
+{
+    float y;
+    float tmp1;
+
+    if(0.0 > x)
+    {
+        y = (float)M_PI_2 + x;
+    }
+    else
+    {
+        y = (float)M_PI_2 - x;
+    }
+
+    tmp1 = sinChebyshevF(y);
+
+    return tmp1;
+}
+/*
+ Function:Dua gia tri bien dau ra cua bo quan sat dong dien, back emf ve 0 (reset ve 0)
+ */
+void resetSMO(tagSMO *SMOdataP)
+{
+    IalphaHat = 0;
+    IbetaHat = 0;
+    EalphaHat = 0;
+    EbetaHat = 0;
+}
+/*
+ Function:Bo quan sat dong dien  tinh toan dong dien uoc luong sau do so sanh voi dong dien sau khi chuyen he toa do (measure) de tinh toan he so Balpha, Bbeta
+ Input:current_alpha, Usalpha, EalphaHat (tuong tu voi beta)
+ Output:Balpha, IalphaHat (tuong tu voi beta)
+ */
+void currentObserver(float Current, float U, float Ehat, float * Ihat, float * B)
+{
+    float tmp1;
+
+    tmp1 = Current - *Ihat;
+
+    if(boundary_I < tmp1)
+    {
+        *B = currentObserver_gain;
+    }
+    else if(boundary_I > tmp1)
+    {
+        *B = -currentObserver_gain;
+    }
+    else
+    {
+        *B = tmp1 *(float)(currentObserver_gain/boundary_I) ;
+    }
+
+    *Ihat = (aIObs * (*Ihat)) + (b1IObs * Ehat) + (b2IObs * U) + (b3IObs * (*B));
+}
+/*
+ Function: tinh toan he so bo quan sat back emf
+ Input:We toc do khi chay do duoc
+ Output:he so bo quan sat BEMFobserver
+ */
+void BEMFobsCoeffCal(float WeObs)
+{
+    float tmp1;
+    float tmp2;
+
+    if((0.000001 > WeObs) && (0.000001 < WeObs))
+    {
+        return;
+    }
+
+    tmp1 = WeObs * Ts;
+    a1BEMFobs = cosChebyshevF(tmp1);
+    a2BEMFobs = sinChebyshevF(tmp1);
+    tmp1 = 1.0f - a1BEMFobs;
+    tmp2 = bemfObserver_gain / WeObs;
+    b1BEMFobs = ((tmp2 * a2BEMFobs) + tmp1) * Ls;
+    b2BEMFobs = (a2BEMFobs - (tmp2 * tmp1)) * Ls;
+}
+/*
+ Function: Tinh toan back emf uoc luong
+ Input:Balpha, Bbeta
+ Output:EalphaHat,EbetaHat
+ */
+void BEMFobserver(float * E1hat, float E2hat, float B1, float B2)
+{
+     *E1hat =  (a1BEMFobs * (*E1hat)) + (a2BEMFobs * E2hat) + (b1BEMFobs * B1) + (b2BEMFobs * B2);
+}
+void exeSMO(void){
+	float zEalphaHat;
+	currentObserver(current_alpha, Usalpha, EalphaHat, &IalphaHat, &Balpha);
+	currentObserver(current_beta, Usbeta, EbetaHat, &IbetaHat, &Bbeta);
+	zEalphaHat = EalphaHat;
+	BEMFobsCoeffCal(We);
+	BEMFobserver(&EalphaHat, -EbetaHat, Balpha, Bbeta);
+	BEMFobserver(&EbetaHat, zEalphaHat, Bbeta, -Balpha);
+}
+/*
+ Function: Tinh toan arctan cua gia tri tan=sin/cos
+ Input:tanVal
+ Output: tra ve goc trong khoang -pi/2 den pi/2
+ */
+float polynmApproxAtanf(float tanVal)
+{
+    float z, zz;
+
+    if(1.0f < tanVal)
+    {
+        z = 1;
+    }
+    else if(-1.0f > tanVal)
+    {
+        z = -1;
+    }
+    else
+    {
+        z = tanVal;
+    }
+
+    zz = z * z;
+
+    return ((RL_A*zz + RL_B)*zz + RL_C)*z;
+}
+/*
+ Function:Tinh toan arctan cua gia tri tan=sin/cos (nam trong toan bo 4 goc phan tu cua vong tron luong giac)
+ Input:sin(), cos()
+ Output:tra ve goc trong vong tron luong giac
+ */
+float polynmApproxAtan2f(float y, float x)
+{
+    float tmp1, tmp2, z;
+
+    tmp1 = floatAbs(y);
+    tmp2 = floatAbs(x);
+    z = (tmp1 > tmp2) ? (tmp1) : (tmp2);
+
+    if(z < RL_EPSILON_F)
+    {
+        return 0.0f;
+    }
+
+    if(tmp2 >= tmp1)
+    {
+        z = y / x;
+        tmp2 = polynmApproxAtanf(z);
+        if(x > 0)
+        {
+            tmp1 = tmp2;
+        }
+        else if(y > 0)
+        {
+            tmp1 = tmp2 + (float)M_PI;
+        }
+        else
+        {
+            tmp1 = tmp2 - (float)M_PI;
+        }
+    }
+    else
+    {
+        z = x / y;
+        tmp2 = polynmApproxAtanf(z);
+        if(y > 0)
+        {
+            tmp1 = -tmp2 + (float)M_PI_2;
+        }
+        else
+        {
+            tmp1 = -tmp2 - (float)M_PI_2;
+        }
+    }
+
+    return tmp1;
+}
+
+/*
+ Function:Tinh toan goc dong co
+ Input:EbetaHat,EalphaHat
+ Output:positionTHI,positionTHO (goc dong co tai thoi diem t va t+1)
+ */
+void ThetaCal(void){
+	float tmp, tmp1, tmp2;
+    tmp=polynmApproxAtan2f(EbetaHat,EalphaHat);
+    if(0 > tmp)
+    {
+        positionTH = tmp + 2*PI;
+    }
+    else
+    {
+        positionTH = tmp;
+    }
+
+    tmp1 = (positionTH) - (positionzTH);
+    if(-M_PI > tmp1)
+    {
+        positiondTH = tmp1 + RL_2PI;
+    }
+    else if(M_PI < tmp1)
+    {
+        positiondTH = tmp1 - RL_2PI;
+    } else
+    {
+        positiondTH = tmp1;
+    }
+
+    positionTHI = positionTH;
+
+    tmp2 = positionTHI + positiondTH;
+    if(0 > tmp2)
+    {
+        positionTHO = tmp2 + 2*PI;
+    }
+    else if(RL_2PI < tmp2)
+    {
+        positionTHO = tmp2 - 2*PI;
+    }
+    else
+    {
+        positionTHO = tmp2;
+    }
+
+    positionzTH = positionTH;
+
+}
+
+/*
+ Function: Ham tinh toan toc do dong co do ve (Speed Measurment). goc=tich phan cua toc do => (theta(t+1)-theta(t))xdelta=speed)
+ Input:positiondTH
+ Output:SpeedMea1
+ */
+void SpeedCal(void){
+    float tmp1;
+    uint16_t tmp2;
+
+    tmp1 = positiondTH;
+    tmp2 = countFIFO;
+    FIFOdTH[tmp2] = tmp1;
+
+    if(22 > (float)tmp2)
+    {
+        countFIFO++;
+    }
+    else
+    {
+        countFIFO = 0;
+    }
+
+    tmp2 = countFIFO;
+    SUMdTH +=  tmp1 - FIFOdTH[tmp2];
+    SpeedMea1 = SUMdTH * 1000;
+}
+/*
+ Function:Reset ca gia tri cua mang FIFOdTH[] ve 0
+ */
+void resetSpeedCal()
+{
+    uint16_t tmp;
+
+    countFIFO = 0;
+
+    for(tmp=0; 22 >= tmp; tmp++)
+    {
+        FIFOdTH[tmp] = 0;
+    }
+}
+/*
+ Function:Goi ra ham tinh toan goc va toc do dong co
+ */
+void motionCal(){
+	ThetaCal();
+	SpeedCal();
 }
