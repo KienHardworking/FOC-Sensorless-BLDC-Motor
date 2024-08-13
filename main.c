@@ -64,7 +64,13 @@ float closeLoopTHI=0;
 float closeLoopTHO=0;
 float deviationTH=0;
 float decayRateTH=0;
-float closeLoopTHstate=0;
+uint16_t closeLoopTHstate=0;
+float finalTHI=0;
+float finalTHO=0;
+
+uint16_t estimatorState=0;
+uint16_t estimatorStatecnt1=0;
+float speedRefCnt=(float)(0.2)*PWM_FREQ;
 
 float SUMdTH=0;
 float SpeedMea1=0;
@@ -647,6 +653,26 @@ int main(void)
   }
 }
 
+
+/*
+ TIMER_0->INTERRUPT_0->50us (1/20000)
+ Function:vong lap 50us tinh toan 1 lan, thuat toan FOC
+ */
+void InterruptHandler(){
+	AlphaBetaTrans_Current();
+	motionEstimator();
+	ThetaLoopControl();
+	Theta=finalTHI;
+	SinCosCheck();
+	DQTrans_Current();
+	LoopcontrolTask();
+	Theta=finalTHO;
+	SinCosCheck();
+	UsdqtoUsalphabeta();
+	UsalphabetatoUsabc();
+	SVMAlgorithm();
+	UpdatePWMDutyCycle();
+}
 /*
  Function: Doc ADC dong do ve tren dai 4095 bit qua bo loc moving average filter, tra ve gia tri thuc (A)
  Input:current_phaseU, current_phaseV
@@ -919,7 +945,7 @@ void LoopcontrolTask( void )
         }
         IsqRef = IsqRef_OPENLOOP;
         UsqCal();
-        UsdCal;
+        UsdCal();
     }
     else
     {
@@ -937,7 +963,7 @@ void LoopcontrolTask( void )
 /*
  Function: Dua goc dong co ve gia tri nam trong dai 0 den 2pi
  */
-static inline float WrapFrom0To2Pi(float raw){
+float WrapFrom0To2Pi(float raw){
     float tmp;
 
     if(0.0 > raw)
@@ -962,7 +988,7 @@ static inline float WrapFrom0To2Pi(float raw){
  Input:Theta, positionTHI, positionTHO
  Output:closeloopTHI, closeloopTHO
  */
-static inline void CloseLoopTHcal(void){
+void CloseLoopTHcal(void){
     float tmp1;
 
     tmp1 = Theta;
@@ -1007,7 +1033,7 @@ static inline void CloseLoopTHcal(void){
  Input:Theta
  Output:finalTHI, finalTHO
  */
-void ThetaCal(void)
+void ThetaLoopControl(void)
 {
 	if(OpenLoop==1)
     {
@@ -1143,7 +1169,7 @@ float cosChebyshevF(float x)
 /*
  Function:Dua gia tri bien dau ra cua bo quan sat dong dien, back emf ve 0 (reset ve 0)
  */
-void resetSMO(tagSMO *SMOdataP)
+void resetSMO()
 {
     IalphaHat = 0;
     IbetaHat = 0;
@@ -1374,7 +1400,7 @@ void SpeedCal(void){
 /*
  Function:Reset ca gia tri cua mang FIFOdTH[] ve 0
  */
-void resetSpeedCal()
+void resetSpeedCal(void)
 {
     uint16_t tmp;
 
@@ -1391,4 +1417,69 @@ void resetSpeedCal()
 void motionCal(){
 	ThetaCal();
 	SpeedCal();
+}
+/*
+ Function: Reset cac bien output cua SMO, bien trang thai cua Estimator, gia tri mang luu tru delta(goc)=theta1-theta2
+ */
+
+void resetEstimator()
+{
+    estimatorState = 0;
+    resetSMO();
+    resetSpeedCal();
+    estimatorStatecnt1 = 0;
+}
+/*
+ Function:Uoc luong BEMF, tinh toan goc, toc do dong co o cac trang thai Alignment, Openloop, Closloop
+ */
+void motionEstimator()
+{
+    float tmp;
+
+    if(1 == flagStartObs)
+    {
+        flagStartObs = 0;
+        estimatorState = 0;
+    }
+
+    switch(estimatorState)
+    {
+        case 0:
+            resetSMO();
+            resetSpeedCal();
+            estimatorStatecnt1 = 0;
+            estimatorState = 1;
+            break;
+        case 1:
+            if(2 == flagStartObs)
+            {
+                estimatorStatecnt1++;
+            }
+            if(1 <= estimatorStatecnt1)
+            {
+                estimatorStatecnt1 = 0;
+                flagStartObs = 0;
+                estimatorState = 2;
+            }
+            break;
+        case 2:
+            tmp = END_SPEED_RADS_PER_SEC_ELEC;
+            We = tmp;
+            exeSMO();
+            motionCal();
+            estimatorStatecnt1++;
+            if(speedRefCnt <= (float)estimatorStatecnt1)
+            {
+                estimatorStatecnt1 = 0;
+                estimatorState = 3;
+            }
+            break;
+        case 3:
+            We = SpeedMea1;
+            exeSMO();
+            motionCal();
+            break;
+        default:
+            break;
+    }
 }
