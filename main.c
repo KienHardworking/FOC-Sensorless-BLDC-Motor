@@ -90,8 +90,8 @@ float current_sd=0;
 float current_sq=0;
 
 float SpeedError=0;
-float Kp_IsqRef;
-float Ki_IsqRef;
+float Kp_IsqRef=0.02;
+float Ki_IsqRef=0.005;
 float sum_IsqRef=0;
 float IsqRef1=0;
 float IsqRef=0;
@@ -99,14 +99,14 @@ float IsdError=0;
 float sum_Usd=0;
 float Usd1=0;
 float Usd=0;
-float Kp_Usd;
-float Ki_Usd;
+float Kp_Usd=0.02;
+float Ki_Usd=0.005;
 float IsqError=0;
 float sum_Usq=0;
 float Usq1=0;
 float Usq=0;
-float Kp_Usq;
-float Ki_Usq;
+float Kp_Usq=0.02;
+float Ki_Usq=0.005;
 
 
 float Usalpha=0,Usbeta=0;
@@ -655,32 +655,13 @@ int main(void)
 }
 
 
-/*
- TIMER_0->INTERRUPT_0->50us (1/20000)
- Function:vong lap 50us tinh toan 1 lan, thuat toan FOC
- */
-void InterruptHandler(){
-	CurrentCoeffCal();
-	AlphaBetaTrans_Current();
-	motionEstimator();
-	ThetaLoopControl();
-	Theta=finalTHI;
-	SinCosCheck();
-	DQTrans_Current();
-	LoopcontrolTask();
-	Theta=finalTHO;
-	SinCosCheck();
-	UsdqtoUsalphabeta();
-	UsalphabetatoUsabc();
-	SVMAlgorithm();
-	UpdatePWMDutyCycle();
-}
+
 /*
  Function: Doc ADC dong do ve tren dai 4095 bit qua bo loc moving average filter, tra ve gia tri thuc (A)
  Input:current_phaseU, current_phaseV
  Output:current_u, current_v
  */
-void Adc_Measurement_Handler(){
+void Adc_Measurement_Handler(void){
 	current_phaseU=ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Current_PhaseU);
 	current_phaseV=ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Current_PhaseV);
 
@@ -1489,6 +1470,28 @@ void motionEstimator()
             motionCal();
             break;
         default:
-            break;
+        	break;
     }
+}
+
+
+/*
+ TIMER_0->INTERRUPT_0->50us (1/20000)
+ Function:vong lap 50us tinh toan 1 lan, thuat toan FOC
+ */
+void InterruptHandler(void){
+	currentCoeffCal();
+	AlphaBetaTrans_Current();
+	motionEstimator();
+	ThetaLoopControl();
+	Theta=finalTHI;
+	SinCosCheck();
+	DQTrans_Current();
+	LoopcontrolTask();
+	Theta=finalTHO;
+	SinCosCheck();
+	UsdqtoUsalphabeta();
+	UsalphabetatoUsabc();
+	SVMAlgorithm();
+	UpdatePWMDutyCycle();
 }
