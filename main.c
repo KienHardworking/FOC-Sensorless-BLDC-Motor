@@ -21,22 +21,23 @@
  */
 XMC_VADC_RESULT_SIZE_t current_phaseU,current_phaseV;
 float ADC_scale=max_motor_current/1433;
-float cumulative_sum_phaseU=0;
-float moving_average_phaseU=0;
+unsigned int cumulative_sum_phaseU=0;
+unsigned int cumulative_sum_phaseV=0;
+int32_t moving_average_phaseU=0;
+int32_t moving_average_phaseV=0;
 
+float aIObs = 0;
+float b1IObs = 0;
+float b2IObs = 0;
+float b3IObs = 0;
 uint16_t flagStartObs=0;
-float aIObs=(float)(exp(F));
-float b1IObs=(float)((exp(F)-1.0f)/Rs);
-float b2IObs=(float)(-((exp(F)-1.0f)/Rs));
-float b3IObs=(float)(Ls*(-((exp(F)-1.0f)/Rs)));
-float F=((float)(-Rs/(Ls*Ts)));
 float EalphaHat=0;
 float EbetaHat=0;
 float IalphaHat=0;
 float IbetaHat=0;
 float Balpha=0;
 float Bbeta=0;
-float a1BEMFob=0;
+float a1BEMFobs=0;
 float a2BEMFobs=0;
 float b1BEMFobs=0;
 float b2BEMFobs=0;
@@ -659,6 +660,7 @@ int main(void)
  Function:vong lap 50us tinh toan 1 lan, thuat toan FOC
  */
 void InterruptHandler(){
+	CurrentCoeffCal();
 	AlphaBetaTrans_Current();
 	motionEstimator();
 	ThetaLoopControl();
@@ -745,7 +747,7 @@ void DQTrans_Current(void){
  */
 void IsqRefCal(void){
 	SpeedError=SpeedRef-SpeedMea;
-	sum_IsqRef=sum_IsqRef+Error*Ts;
+	sum_IsqRef=sum_IsqRef+SpeedError*Ts;
 	IsqRef1=Kp_IsqRef*SpeedError+Ki_IsqRef*sum_IsqRef;
     IsqRef=IsqRef+IsqRef1;
 }
@@ -1181,6 +1183,13 @@ void resetSMO()
  Input:current_alpha, Usalpha, EalphaHat (tuong tu voi beta)
  Output:Balpha, IalphaHat (tuong tu voi beta)
  */
+void currentCoeffCal(void)
+{
+        aIObs = (exp(-Rs/(Ls*Ts)));
+        b1IObs = (float)((exp(-Rs/(Ls*Ts))-1.0f)/Rs);
+        b2IObs = (float)(-((exp(-Rs/(Ls*Ts))-1.0f)/Rs));
+        b3IObs = (float)(Ls*(-((exp(-Rs/(Ls*Ts))-1.0f)/Rs)));
+}
 void currentObserver(float Current, float U, float Ehat, float * Ihat, float * B)
 {
     float tmp1;
@@ -1341,11 +1350,11 @@ void ThetaCal(void){
     tmp1 = (positionTH) - (positionzTH);
     if(-M_PI > tmp1)
     {
-        positiondTH = tmp1 + RL_2PI;
+        positiondTH = tmp1 + 2*PI;
     }
     else if(M_PI < tmp1)
     {
-        positiondTH = tmp1 - RL_2PI;
+        positiondTH = tmp1 - 2*PI;
     } else
     {
         positiondTH = tmp1;
@@ -1358,7 +1367,7 @@ void ThetaCal(void){
     {
         positionTHO = tmp2 + 2*PI;
     }
-    else if(RL_2PI < tmp2)
+    else if((2*PI) < tmp2)
     {
         positionTHO = tmp2 - 2*PI;
     }

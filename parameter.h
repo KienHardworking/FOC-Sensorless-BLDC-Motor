@@ -9,6 +9,7 @@
 #define PARAMETER_H_
 #include "math.h"
 
+
 #define RL_EPSILON_F ((float)0.00000001)
 #define RL_A ((float)0.0776509570923569)
 #define RL_B ((float)-0.287434475393028)
